@@ -38,7 +38,7 @@ jobs:
               run: |
                   cd docs
                   bun install
-                  bun build
+                  bun run build
 
             - name: Setup Pages
               uses: actions/configure-pages@v3
