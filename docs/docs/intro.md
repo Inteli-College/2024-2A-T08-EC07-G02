@@ -8,11 +8,12 @@ slug: /
 O projeto se baseira na criação de uma solução com modelo preditivo para indicar ao inspetor de veículos o tipo de inspeção que deverá ser realizada em um veículo. A solução será desenvolvida em Python ou JavaScript, para facilitar a integração com o sistema de inspeção. O modelo preditivo será treinado com base em uma lista de parâmetros e deverá ser calibrado mensalmente com os novos dados de produção. Espera-se que o modelo tenha uma assertividade acima de 95% para que seja possível sua utilização. O desenvolvimento do projeto será realizado pelo analista de sistemas da fábrica, que irá adaptar o processo e utilizar o resultado do algoritmo de uma forma visual, para que o motorista inspetor consiga saber que tipo de inspeção ele deverá realizar naquele veículo.
 
 ## 👨‍🎓 Integrantes:
-- [Vinicios Lugli](https://www.linkedin.com/in/vinicioslugli/)
-- [Eduardo Santos](https://www.linkedin.com/in/eduardo-henrique-dos-santos/)
-- [Gabrielle Mitoso](https://www.linkedin.com/in/gabrielle-mitoso/)
 - [Cecilia Gonçalves](https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/)
+- [Eduardo Santos](https://www.linkedin.com/in/eduardo-henrique-dos-santos/)
+- [Gabriel Gallo](https://www.linkedin.com/in/gabriel-gallo-m-coutinho-443809232/)
+- [Gabrielle Mitoso](https://www.linkedin.com/in/gabrielle-mitoso/)
 - [Guilherme Linhares](https://www.linkedin.com/in/guilherme-ferreira-linhares-8638411a1/)
+- [Vinicios Lugli](https://www.linkedin.com/in/vinicioslugli/)
 
 ## 👨‍🏫 Professores:
 
