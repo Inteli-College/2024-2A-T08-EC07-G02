@@ -1,0 +1,2 @@
+# Economia Circular
+A economia circular é um conceito que busca minimizar o desperdício e promover a sustentabilidade através da reutilização, reciclagem e regeneração de recursos. Ao contrário do modelo linear tradicional de produção e consumo, onde os recursos são extraídos, transformados em produtos e descartados, a economia circular propõe um ciclo contínuo de uso e reutilização dos materiais. [1]
