@@ -56,6 +56,8 @@ O ciclo de produção da Volkswagen envolve várias etapas e divisões específi
    - **Marketing e Vendas:** A Volkswagen utiliza estratégias de marketing para promover seus veículos e atrair clientes. Concessionárias e vendas online desempenham um papel crucial na distribuição dos veículos.
    - **Serviço Pós-Venda:** Suporte ao cliente, incluindo manutenção, reparos e serviços de garantia, é fornecido para garantir a satisfação contínua dos clientes com seus veículos Volkswagen.
 
+Ainda que o ciclo de produção da Volkswagen seja complexo e envolva várias etapas, a empresa está comprometida em melhorar a eficiência e sustentabilidade de suas operações. Isso inclui a implementação de uma das suas estratégias, denominada de "one.PRODUCTION", que visa realizar transformações digitais e sustentáveis em suas fábricas, com foco na eficiência energética e uso responsável de recursos naturais.
+
 ## Impactos Sociais e Ambientais [6]
 
 ### 1. **Impactos Ambientais**
