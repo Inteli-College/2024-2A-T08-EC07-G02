@@ -18,6 +18,24 @@
 **RF06:** O sistema de predição deve fornecer o output para o modelo de carro T-Cross está apresentando falhas ou não.
 
 
+# Requisitos não funcionais
+
+&emsp;Os requisitos não funcionais representam as propriedades os quais o sistema deve possuir, tendo como enfoque garantir tecnicamente o funcionamento das funcionalidades adicionadas nos requisitos funcionais, descrevendo como serão feitas as funcionalidades.
+
+&emsp;Desta forma, os requisitos não funcionais relacionados ao projeto são:
+
+**RNF01:** Cada previsão feita pelo sistema deve demorar menos que 5 (cinco) segundos para ser concluída e apresentada ao usuário.
+
+**RNF02:** O sistema deve suportar no mínimo 50 previsões concomitantemente.
+
+**RNF03:** O modelo deve possuir um recall (proporção entre verdadeiros positivos e o número de positivos encontrados) de no mínimo 95%.
+
+**RNF04:** A consulta feita por meio da API deve fornecer a mesma previsão do que a mesma consulta no dashboard.
+
+**RNF05:** O tempo de resposta para uma requisição na API deve ser menor do que 7 (sete) segundos.
+
+**RNF06:** O banco de dados deve ser limpo toda semana, possuindo apenas o histórico de consultas realizados na mesma semana.
+
 # Bibliografia:
 [1] Requisitos funcionais e não funcionais: o que são? www.mestresdaweb.com.br. Disponível em: [https://www.mestresdaweb.com.br/tecnologias/requisitos-funcionais-e-nao-funcionais-o-que-sao](https://www.mestresdaweb.com.br/tecnologias/requisitos-funcionais-e-nao-funcionais-o-que-sao).
 
