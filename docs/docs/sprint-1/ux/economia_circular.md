@@ -12,7 +12,7 @@ No projeto, a economia circular é aplicada pela Volkswagen através da reduçã
 
 No projeto, os dados serão acessados através de APIs realizadas pelos integrantes do grupo Presgen, que fornecem informações sobre a produção, logística e sustentabilidade da empresa. Esses dados serão utilizados para criar visualizações interativas que permitam aos usuários explorar e compreender melhor o ciclo de produção da Volkswagen e seus impactos ambientais e sociais.
 
-## Matérias-Primas e Recursos [2]
+## Matérias-Primas e Recursos [3]
 
 ### 1. **Matérias-Primas**
 - **Metais:** A Volkswagen utiliza metais como alumínio, aço, cobre, e metais preciosos (como platina) na fabricação de veículos. Para veículos elétricos, materiais como lítio, cobalto, níquel e manganês são cruciais para a produção de baterias.
@@ -24,7 +24,7 @@ No projeto, os dados serão acessados através de APIs realizadas pelos integran
 - **Energia Elétrica e Térmica:** Utilizada nas fábricas para o processo de fabricação.
 - **Água:** Necessária em processos de resfriamento e na pintura de veículos.
 
-## Ciclo de Produção da Volkswagen [4]
+## Ciclo de Produção da Volkswagen [5]
 
 ![Ciclo de Produção da Volkswagen](../../../static/img/ciclo_grafico.png)
 
@@ -56,7 +56,7 @@ O ciclo de produção da Volkswagen envolve várias etapas e divisões específi
    - **Marketing e Vendas:** A Volkswagen utiliza estratégias de marketing para promover seus veículos e atrair clientes. Concessionárias e vendas online desempenham um papel crucial na distribuição dos veículos.
    - **Serviço Pós-Venda:** Suporte ao cliente, incluindo manutenção, reparos e serviços de garantia, é fornecido para garantir a satisfação contínua dos clientes com seus veículos Volkswagen.
 
-## Impactos Sociais e Ambientais [5]
+## Impactos Sociais e Ambientais [6]
 
 ### 1. **Impactos Ambientais**
 - **Emissões de Carbono:** A produção e logística contribuem significativamente para as emissões de CO2, um ponto que a Volkswagen busca mitigar com eficiência energética e energia renovável.
@@ -67,7 +67,7 @@ O ciclo de produção da Volkswagen envolve várias etapas e divisões específi
 - **Direitos Humanos:** A Volkswagen enfrenta desafios em garantir que a extração de matérias-primas respeite os direitos humanos, especialmente em regiões de mineração de alto risco.
 - **Condições de Trabalho:** A empresa está focada em melhorar as condições de trabalho ao longo da sua cadeia de suprimentos, com auditorias e programas de desenvolvimento de fornecedores.
 
-## Utilização, Reutilização e Reciclagem [3]
+## Utilização, Reutilização e Reciclagem [4]
 
 ### 1. **Utilização**
 - **Eficiência Energética:** Carros elétricos e combustíveis alternativos estão sendo promovidos para reduzir o impacto ambiental durante a utilização dos veículos.
@@ -79,7 +79,7 @@ O ciclo de produção da Volkswagen envolve várias etapas e divisões específi
 - **Reciclagem de Baterias:** A reciclagem de baterias de íons de lítio é crítica devido à presença de metais valiosos e ao impacto ambiental de resíduos perigosos.
 - **Reciclagem de Metais e Plásticos:** O aço e o alumínio são altamente recicláveis, e a Volkswagen tem programas para melhorar as taxas de reciclagem de plásticos.
 
-## Descarte [5]
+## Descarte [6]
 
 ### 1. **Descarte Adequado**
 - **Infraestrutura de Reciclagem:** A Volkswagen investe em infraestrutura para garantir o descarte adequado de veículos fora de uso, incluindo a reciclagem de materiais perigosos como baterias e fluidos.
@@ -90,8 +90,14 @@ O ciclo de produção da Volkswagen envolve várias etapas e divisões específi
 
 ## Referências
 
-[1] What is circular economy?. Disponível em: https://www.ellenmacarthurfoundation.org/topics/circular-economy-introduction/overview. <br>
-[2] Group sustainability report 2023. Disponível em: https://www.volkswagen-group.com/en/publications/more/group-sustainability-report-2023-2674. <br>
-[3] Volkswagen Goup - Sustainability. Disponível em: https://www.volkswagen-group.com/en/sustainability-15772. <br>
-[4] Volkswagen Group - Group management report (Production). Disponível em: https://annualreport2023.volkswagen-group.com/group-management-report/sustainable-value-enhancement/production.html. <br>
-[5] Volkswagen strengthens its rules to ensure sustainable, socially compatible raw material procuremen. Disponível: https://www.volkswagen-group.com/en/press-releases/volkswagen-strengthens-its-rules-to-ensure-sustainable-socially-compatible-raw-material-procurement-16386.
+[1] What is circular economy? Disponível em: https://www.ellenmacarthurfoundation.org/topics/circular-economy-introduction/overview.
+
+[2] Group sustainability report 2023. Disponível em: https://www.volkswagen-group.com/en/publications/more/group-sustainability-report-2023-2674.
+
+[3] Volkswagen Group - Group Management Report (Production). Disponível em: https://annualreport2023.volkswagen-group.com/group-management-report/sustainable-value-enhancement/production.html.
+
+[4] Volkswagen Goup - Sustainability. Disponível em: https://www.volkswagen-group.com/en/sustainability-15772.
+
+[5] Volkswagen Group - Group management report (Production). Disponível em: https://annualreport2023.volkswagen-group.com/group-management-report/sustainable-value-enhancement/production.html.
+
+[6] Volkswagen strengthens its rules to ensure sustainable, socially compatible raw material procuremen. Disponível: https://www.volkswagen-group.com/en/press-releases/volkswagen-strengthens-its-rules-to-ensure-sustainable-socially-compatible-raw-material-procurement-16386.
