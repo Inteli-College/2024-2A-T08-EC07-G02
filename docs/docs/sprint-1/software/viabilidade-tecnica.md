@@ -37,11 +37,12 @@ O projeto pode incorrer em despesas consideráveis, dependendo da complexidade, 
 ### Tempo de Execução
 A implementação total pode demorar diversos meses, englobando o desenvolvimento, os testes, as adaptações e as certificações exigidas.
 
-## Risco e Desafios
-### Risco 1
-### Risco 2
+## Riscos e Desafios
+### Overfitting 
+Existe a possibilidade de que o modelo se adapte de forma excessiva aos dados de treinamento, o que pode prejudicar sua habilidade de generalizar para novos dados e alcançar a precisão almejada de 95%.
 
-
+### Manutenção e Atualização
+É necessário realizar ajustes periódicos no modelo para garantir sua exatidão. Problemas na atualização ou cuidados com o equipamento podem resultar na redução do desempenho, gerando aumento na complexidade e nos gastos operacionais.
 
 # Bibliografia:
 Arrumar
