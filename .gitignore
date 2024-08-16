@@ -2,6 +2,5 @@
 .vscode
 .venv
 venv
-
-# Temporary files
 temp/
+venv/
