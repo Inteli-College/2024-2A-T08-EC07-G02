@@ -50,10 +50,45 @@ Para abordar a tarefa de predição, foram mapeados os seguintes modelos de apre
 ### Conclusão da pesquisa
 Para um primeiro modelo, o _Gradient Boosting Machines (GBM)_ é recomendado devido à sua alta precisão e capacidade de capturar interações complexas entre as variáveis. O _Random Forest_ também é uma boa opção, pois oferece resistência ao _overfitting_ e fornece uma medida da importância das variáveis. O _Support Vector Machine (SVM)_ é uma alternativa robusta para conjuntos de dados com muitas variáveis e classes não-linearmente separáveis.
 
-## Resultados
-### Modelo 1
+## Métricas de Avaliação
 
-### Modelo 2
+Para avaliar a eficácia dos modelos de predição, serão utilizadas as seguintes métricas:
+
+- **Acurácia**: A acurácia mede a proporção de previsões corretas feitas pelo modelo. É uma métrica geral que indica a qualidade geral do modelo.
+	- (Acurácia = (Verdadeiros Positivos + Verdadeiros Negativos) / Total de Instâncias) <a href="#bibliografia">[[5]](#bibliografia)</a>
+- **Recall**: O _recall_ mede a proporção de instâncias positivas que foram corretamente identificadas pelo modelo. É útil quando o custo de um falso negativo é alto.
+	- (_recall_ = verdadeiros positivos / (verdadeiros positivos + falsos negativos)) <a href="#bibliografia">[[5]](#bibliografia)</a>
+- **F1-Score**: O _F1-Score_ é a média harmônica da precisão e do _recall_. É uma métrica útil para equilibrar a precisão e o _recall_.
+	- (_F1-Score_ = 2 * (Precisão * _recall_) / (Precisão + _recall_)) <a href="#bibliografia">[[5]](#bibliografia)</a>
+
+## Resultados
+
+Serão apresentados os resultados dos modelos de predição desenvolvidos, incluindo a acurácia, _recall_ e _F1-Score_ obtidos para cada modelo.
+
+### Modelo Gradient Boosting Machines (GBM)
+
+Resultado do modelo de predição utilizando o algoritmo _Gradient Boosting Machines (GBM)_:
+
+- **Acurácia**: 0.997
+- **_Recall_**: 1.00
+- **_F1-Score_**: 1.00
+
+O modelo em sí foi utilizado sem customizações nos hiperparâmetros, pelo resultado obtido, atualmente nosso _dataset_ sofre de um problema de _Overfitting_, onde o modelo está muito ajustado para os dados de treino, mas não generaliza bem para novos dados. Para melhorar a performance do modelo, será necessário ajustar os hiperparâmetros, como a profundidade máxima das árvores, a taxa de aprendizado e o número de árvores no _GBM_ e alteração nas _features_ utilizadas no treinamento, para evitar que o modelo se ajuste demais aos dados de treino e tenha uma performance melhor na predição de novos dados. <a href="#bibliografia">[[6]](#bibliografia)</a>
+
+
+### Modelo Support Vector Machine (SVM)
+
+Resultado do modelo de predição utilizando o algoritmo _Support Vector Machine (SVM)_:
+
+- **Acurácia**: 0.997
+- **_Recall_**: 1.00
+- **_F1-Score_**: 1.00
+
+Obtendo um resultado semelhante ao _GBM_, o modelo _SVM_ também sofre de _Overfitting_, onde o modelo está muito ajustado para os dados de treino, mas não generaliza bem para novos dados. Isso reforça a necessidade de ajustar os hiperparâmetros do modelo e as _features_ utilizadas no treinamento para melhorar a performance do modelo na predição de novos dados. <a href="#bibliografia">[[6]](#bibliografia)</a>
+
+### Conclusão
+
+Mesmo com o problema de _Overfitting_, os modelos _Gradient Boosting Machines (GBM)_ e _Support Vector Machine (SVM)_ ainda são modelos promissores para a predição no nosso ambiente de dados, assim, no próximo sprint, será necessário refatorar toda estrutura de nosso _dataset_ e criar novas estratégias para evitar o _Overfitting_ e melhorar a performance dos modelos. <a href="#bibliografia">[[6]](#bibliografia)</a>
 
 ## Bibliografia:
 
@@ -64,3 +99,8 @@ Para um primeiro modelo, o _Gradient Boosting Machines (GBM)_ é recomendado dev
 [3] SCIKIT-LEARN. Ensemble Methods. Disponível em: [https://scikit-learn.org/stable/modules/ensemble.html](https://scikit-learn.org/stable/modules/ensemble.html). Acesso em: 13 ago. 2024.
 
 [4] SCIKIT-LEARN. Support Vector Machines. Disponível em: [https://scikit-learn.org/stable/modules/svm.html](https://scikit-learn.org/stable/modules/svm.html). Acesso em: 14 ago. 2024.
+
+[5] SCIKIT-LEARN. Model Evaluation. Disponível em: [https://scikit-learn.org/stable/modules/model_evaluation.html](https://scikit-learn.org/stable/modules/model_evaluation.html). Acesso em: 14 ago. 2024.
+
+[6] SCIKIT-LEARN. Underfitting vs. Overfitting. Disponível em: [https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html](https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html). Acesso em: 14 ago. 2024.
+
