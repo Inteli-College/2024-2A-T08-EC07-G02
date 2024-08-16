@@ -1,0 +1,7 @@
+# Development
+.vscode
+.venv
+venv
+
+# Temporary files
+temp/
