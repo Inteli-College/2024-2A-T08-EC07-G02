@@ -26,9 +26,8 @@ O diagrama em questão segue a estrutura de um Value Proposition Canvas. Vamos d
 ## Proposta de Valor
 
 ### Produtos e Serviços
-- Modelo preditivo avançado: Desenvolvimento de um modelo de machine learning usando Python, que classifica veículos e prevê falhas com base em dados históricos.
+- Modelo preditivo avançado para a identificação de falhas no teste de rodagem: Desenvolvimento de um modelo de machine learning usando Python, que classifica veículos e prevê falhas com base em dados históricos.
 - Integração facilitada: O modelo é desenvolvido para se integrar sem problemas aos sistemas atuais, com execução local e opções de demonstração em nuvem.
-- Documentação detalhada e procedimentos de implementação: Fornecimento de documentação abrangente que cobre desde a instalação do modelo até a integração e melhores práticas de utilização, garantindo que a Volkswagen tenha todas as ferramentas necessárias para uma implementação bem-sucedida.
 
 ### Aliviadores de Dores
 - Redução de falhas não detectadas: O modelo preditivo melhora significativamente a capacidade de identificar falhas, minimizando problemas que possam passar despercebidos no processo atual.
