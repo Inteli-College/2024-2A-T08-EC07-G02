@@ -4,7 +4,7 @@ O Value Proposition Canvas é uma ferramenta estratégica que permite aos empree
 
 O diagrama em questão segue a estrutura de um Value Proposition Canvas. Vamos detalhar cada uma das seis áreas do Canvas aplicado ao Presgen e seu impacto no contexto da Volkswagen.
 
-![Value Proposition Canvas](value-proposition-canvas.png)
+![Value Proposition Canvas](/img/value-proposition-canvas.png)
 
 ## Perfil do Cliente
 
