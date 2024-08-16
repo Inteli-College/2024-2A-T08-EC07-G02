@@ -12,8 +12,6 @@ Esses modelos foram escolhidos devido à sua eficácia em tarefas de predição 
 - **Matplotlib**: ferramenta que permite criar gráficos que ajudam a identificar padrões.
 
 ## Dados
-### Disponibilidade de Dados
-. 
 
 ### Exploração dos Dados
 
@@ -46,6 +44,5 @@ Existe a possibilidade de que o modelo se adapte de forma excessiva aos dados de
 
 # Bibliografia:
 Arrumar
-https://medium.com/turing-talks/turing-talks-12-classifica%C3%A7%C3%A3o-por-svm-f4598094a3f1
-
-https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
+- MODELOS DE PREDIÇÃO SVM. **Medium**. Disponível em: https://medium.com/turing-talks/turing-talks-12-classifica%C3%A7%C3%A3o-por-svm-f4598094a3f1
+- GRADIENT BOOSTING CLASSIFIER. **Scikit Learn**. Disponível em: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html
