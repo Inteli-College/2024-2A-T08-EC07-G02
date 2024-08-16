@@ -8,7 +8,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'Grupo 2',
+	title: 'Presgen',
 	tagline: 'Sistema de manutenção preditiva com IA e arquitetura em núvem',
 	favicon: 'img/favicon.ico',
 
@@ -59,10 +59,10 @@ const config = {
 			// Replace with your project's social card
 			image: 'img/docusaurus-social-card.jpg',
 			navbar: {
-				title: 'Home',
+				title: 'Presgen',
 				logo: {
 					alt: 'My Site Logo',
-					src: 'img/logo.svg',
+					src: 'img/logo.png',
 				},
 				items: [
 					{
