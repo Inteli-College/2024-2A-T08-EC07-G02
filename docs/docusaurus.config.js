@@ -33,7 +33,7 @@ const config = {
 		defaultLocale: 'pt-br',
 		locales: ['pt-br'],
 	},
-
+	onBrokenAnchors: 'ignore',
 	presets: [
 		[
 			'classic',
