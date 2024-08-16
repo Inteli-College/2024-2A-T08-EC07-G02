@@ -78,4 +78,4 @@ Além dos custos fixos apresentados, é importante considerar potenciais variaç
 - **Contratos Futuros:** Fixar preços para serviços recorrentes, como infraestrutura em nuvem, pode minimizar riscos de variações de custo.
 
 ## 6. Conclusão
-A análise financeira revisada, incluindo os custos de aquisição de um supercomputador, sugere que o desenvolvimento do MVP para a Volkswagen é viável, embora o período de retorno do investimento (Payback) seja de aproximadamente 7,5 anos. A monitorização constante dos custos variáveis e a implementação de estratégias de mitigação de riscos são essenciais para garantir a sustentabilidade financeira do projeto.
+A análise financeire, sugere que o desenvolvimento do MVP para a Volkswagen é viável, embora o período de retorno do investimento (Payback) seja de aproximadamente 7,5 anos. A monitorização constante dos custos variáveis e a implementação de estratégias de mitigação de riscos são essenciais para garantir a sustentabilidade financeira do projeto.
