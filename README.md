@@ -28,19 +28,71 @@ O projeto intitulado "Sistema de Manutenção Preditiva com IA e Arquitetura em 
 - <a href="https://www.linkedin.com/in/ricardo-jos%C3%A9-missori/">Ricardo Missori</a>
 
 ## Estrutura de Pastas
-
-```
-TBD
-```
+```bash
+.
+├── .github
+├── docs
+│   ├── docs
+│   │   ├── sprint-1
+│   │   ├── sprint-2
+│   │   ├── sprint-3
+│   │   ├── sprint-4
+│   │   ├── sprint-5
+│   │   └── intro.md
+├── src
+├── static
+│   ├── .gitignore
+│   ├── babel.config.js
+│   ├── docusaurus.config.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── README.md
+│   └── sidebars.js
+├── venv
+│   ├── .gitignore
+│   ├── README.md
+│   └── requirements.txt
+````
 
 ## Guia de instrução 
 
-```
-TBD
-```
+Para executar o projeto, siga os passos abaixo:
+1. **Instale as Dependências**: No terminal, execute o comando: `pip install -r requirements.txt`
 
+2. Acesse o Diretório do Código: Navegue até a pasta src.
+
+3. Abra o Arquivo Principal: No Visual Studio Code, abra o arquivo main.ipynb.
+
+4. Execute o Código: Com o arquivo aberto, clique em `Run All` para executar todas as células do notebook.
+   
 ## Documentação
 
 Para acessar a nossa documentação, clique [aqui](https://inteli-college.github.io/2024-2A-T08-EC07-G02/)!
 
 ## 📋 Licença/License
+
+<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+    <a property="dct:title" rel="cc:attributionURL" href="https://github.com/Inteli-College/2024-2A-T08-EC07-G02/">
+        Presgen
+    </a>
+    <span>
+        by
+    </span>
+    <span property="cc:attributionName">
+        <a href="https://www.inteli.edu.br/">Inteli</a>,
+        <a href="https://www.linkedin.com/in/cec%C3%ADlia-alonso-gon%C3%A7alves-3aa4bb271/">Cecília Gonçalves</a>,
+        <a href="https://www.linkedin.com/in/eduardo-henrique-dos-santos/">Eduardo Santos</a>,
+        <a href="https://www.linkedin.com/in/gabriel-gallo-m-coutinho-443809232/">Gabriel Gallo</a>,
+        <a href="https://www.linkedin.com/in/gabrielle-mitoso/">Gabrielle Mitoso</a>,
+        <a href="https://www.linkedin.com/in/guilherme-ferreira-linhares-8638411a1/">Guilherme Linhares</a>,
+        <a href="https://www.linkedin.com/in/vinicioslugli/">Vinicios Lugli</a>
+    </span> 
+    <span>
+        is licensed under
+    </span>
+    <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+        Creative Commons Attribution 4.0 International
+        <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="Creative Commons">
+        <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="Attribution">
+    </a>
+</div>
