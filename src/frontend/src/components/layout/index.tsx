@@ -5,17 +5,14 @@ import { Toaster } from 'react-hot-toast';
 export function Layout({ children }: { children: ReactNode }) {
 	return (
 		<div className="flex flex-col h-screen mx-auto">
-			<Toaster position="top-center" gutter={8} />
+			<Toaster position="bottom-center" gutter={8} />
 
 			<nav className="border-b border-gray-200 py-5 relative z-20 bg-background shadow-[0_0_15px_0_rgb(0,0,0,0.1)]">
 				<div className="flex items-center mx-auto lg:px-6 max-w-7xl px-14">
 					<div className="flex flex-row items-center">
 						<Link className="text-link hover:text-link-light transition-colors no-underline [&_code]:text-link [&_code]:hover:text-link-light [&_code]:transition-colors" href="/">
 							<span>
-								<svg height={26} viewBox="0 0 75 65" fill="#000">
-									<title>Vercel Logo</title>
-									<path d="M37.59.25l36.95 64H.64l36.95-64z" />
-								</svg>
+								<img src="/logo.png" alt="Vercel Logo" className="h-14 w-auto" />
 							</span>
 						</Link>
 						<ul className="flex items-center content-center">
@@ -39,25 +36,33 @@ export function Layout({ children }: { children: ReactNode }) {
 									className="text-link hover:text-link-light transition-colors no-underline [&_code]:text-link [&_code]:hover:text-link-light [&_code]:transition-colors text-accents-6 duration-200 hover:text-accents-8 cursor-pointer"
 									target="_blank"
 									rel="noreferrer"
-									href="https://github.com/ViniciosLugli/nextjs-template"
+									href="https://inteli-college.github.io/2024-2A-T08-EC07-G02/"
 								>
-									Next.js Template
+									Presgen
 								</a>
 							</li>
 						</ul>
 					</div>
+					<div className="flex-1 hidden md:flex text-lg font-semibold justify-center">
+						<nav className="inline-flex flex-row items-center">
+							<Link
+								href="/dashboard"
+								className="text-link hover:text-link-light transition-colors no-underline [&_code]:text-link [&_code]:hover:text-link-light [&_code]:transition-colors"
+							>
+								<span className="ml-3">Dashboard</span>
+							</Link>
+							<Link
+								href="/predict"
+								className="text-link hover:text-link-light transition-colors no-underline [&_code]:text-link [&_code]:hover:text-link-light [&_code]:transition-colors"
+							>
+								<span className="ml-3">Predict</span>
+							</Link>
+						</nav>
+					</div>
 					<div className="justify-end flex-1 hidden md:flex">
 						<nav className="inline-flex flex-row items-center">
 							<span className="flex items-center h-full ml-2 cursor-not-allowed text-accents-5">
-								<a
-									data-variant="ghost"
-									className="relative inline-flex items-center justify-center cursor pointer no-underline px-3.5 rounded-md font-medium outline-0 select-none align-middle whitespace-nowrap transition-colors ease-in duration-200 text-success hover:bg-[rgba(0,68,255,0.06)] h-10 leading-10 text-[15px]"
-									href="https://github.com/vercel/examples/tree/main"
-									target="_blank"
-									rel="noreferrer"
-								>
-									More Examples →
-								</a>
+								<img src="https://ui-avatars.com/api/?name=Vinicios+Lugli" alt="Vinicios Lugli" className="h-12 w-12 rounded-full" />
 							</span>
 						</nav>
 					</div>
