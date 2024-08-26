@@ -4,14 +4,14 @@ custom_edit_url: null
 
 # Proposta geral do sistema
 
-&emsp; De acordo com as reuniões que fizemos com o cliente, interpretamos a dor do parceiro como: 
+&emsp; De acordo com as reuniões que fizemos com o cliente, interpretamos a dor do parceiro como:
 
 "Atualmente, a maneira de assegurar que um carro produzido não possui falhas é fazendo as verificações de qualidade e os testes externos em todos os carros produzidos, o que demanda muito tempo de produção."
 
 &emsp; Para sanarmos a problemática apresentada o grupo Presgen propõe, um sistema em nuvem com um modelo de inteligência artificial para fazer as predições, um dashboard fazer predições e visualizar o histórico de previsõe e, por fim, uma API a qual permita fazer as mesmas consultas que o dashboard. O diagrama a seguir representa os elementos que compõem o sistema e as conexões entre eles e está sujeito a alterações conforme as necessidades do cliente:
 
 <p align="center">
-  ![Diagrama](./../../../static/img/diagrama_proposta.png)
+  ![Diagrama](/img/diagrama_proposta.png)
   <p>Diagrama da arquitetura da solução proposta</p>
 </p>
 
@@ -22,7 +22,7 @@ custom_edit_url: null
 - `Modelo de Inteligência Artificial`: elemento que utiliza treina com dados conhecidos para encontrar padrões e regular-se para predizer resultados com base nos padrões aprendidos durante a sessão de treino.
 
 - `Banco de dados`: elemento responsável por armazenar as consultas feitas pelos usuários de maneira organizada.
-  
+
 - `Back-end`: elemento encarregado de processar as informações recebidas pelo sistema e comunicar as informações necessárias entre os diferentes elementos.
 
 - `API`: elemento é uma interface de comunicação entre o cliente (usuário) e o servidor (back-end) simplificada, comunicando-se por requisições.

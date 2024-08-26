@@ -26,7 +26,7 @@ No projeto, os dados serão acessados através de APIs realizadas pelos integran
 
 ## Ciclo de Produção da Volkswagen [5]
 
-![Ciclo de Produção da Volkswagen](../../../static/img/ciclo_grafico.png)
+![Ciclo de Produção da Volkswagen](/img/ciclo_grafico.png)
 
 Fonte: Elaboração própria.
 

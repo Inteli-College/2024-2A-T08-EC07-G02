@@ -2,7 +2,7 @@
 
 O Business Model Canvas é uma ferramenta usada para mapear os principais atores, atividades e recursos de um negócio ou produto, a proposta de valor, os relacionamentos com clientes, canais envolvidos e questões financeiras. Ele fornece uma visão geral para ajudar a identificar os requisitos para entregar o produto ou serviço.
 
-![Business Model Canvas](business-model-canvas.png)
+![Business Model Canvas](/img/business-model-canvas.png)
 
 ## 1. Proposta de valor (Value Proposition)
 - Otimização de inspeções: Automação e aprimoramento do processo de inspeção, aumentando a precisão e reduzindo o tempo necessário.

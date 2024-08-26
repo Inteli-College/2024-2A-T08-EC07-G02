@@ -10,16 +10,16 @@ Em termos de aplicação prática, os requisitos funcionais são normalmente def
 
 &emsp;Dessa maneira temos para esse projeto da Volkswagen os seguintes requisitos funcionais:
 
-**RF01:** O modelo de predição desenvolvido deve se conectar ao sistema de nuvem AWS, garantindo acesso contínuo e em tempo real aos dados necessários para as análises preditivas.
+**RF01:** O modelo de predição desenvolvido deve se conectar ao sistema em Cloud, garantindo acesso contínuo e em tempo real aos dados necessários para as análises preditivas.
 
-**RF02:** O sistema de predição deve disponibilizar os dados processados por meio de uma API, permitindo que os colaboradores da Volkswagen acessem e utilizem as informações de saída para suas atividades.
+**RF02:** O sistema de predição deve disponibilizar uma interface de acesso por uma API, permitindo que os colaboradores da empresa enviem dados e utilizem as informações de saída para suas atividades.
 
-**RF03:** O sistema de predição deve incluir dashboards interativos, facilitando a análise visual dos dados preditivos pelos colaboradores da Volkswagen, proporcionando uma interface intuitiva e amigável.
+**RF03:** O sistema de predição deve incluir dashboards interativos, facilitando a análise visual dos dados preditivos pelos colaboradores da Volkswagen, proporcionando uma interface intuitiva e amigável para que haja uma melhor compreensão dos dados de maneira rápida.
 
 **RF04:** O sistema deve identificar a área específica onde ocorreu a falha exclusivamente no modelo de carro T-Cross da Volkswagen, categorizando-as em grupos para inspeções detalhadas e assegurando precisão e relevância nos resultados.
 
 
-**RF06:** O sistema de predição deve fornecer o output para o modelo de carro T-Cross está apresentando falhas ou não.
+**RF05:** O sistema de predição deve fornecer o output para o modelo de carro T-Cross está apresentando falhas ou não.
 
 
 # Requisitos não funcionais
