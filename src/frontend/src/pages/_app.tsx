@@ -8,6 +8,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }: AppProps): ReactEleme
 	return (
 		<Layout>
 			<Component {...pageProps} />
+			
 		</Layout>
 	);
 };
