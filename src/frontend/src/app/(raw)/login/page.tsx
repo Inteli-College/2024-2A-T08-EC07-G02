@@ -38,7 +38,7 @@ export default function Login() {
 				<title>Login</title>
 			</Head>
 			<div className="mb-8">
-				<img src="/logo.png" alt="Logo" className="w-40 h-40 object-contain" />
+				<img src="/logo.png" alt="Logo" className="w-80 h-80 object-contain" />
 			</div>
 			<div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
 				<h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">Presgen dashboard</h2>
