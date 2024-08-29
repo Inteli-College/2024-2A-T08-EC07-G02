@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { Toaster } from 'react-hot-toast';
 
-export function Layout({ children }: { children: ReactNode }) {
+export function BaseLayout({ children }: { children: ReactNode }) {
 	return (
 		<div className="flex flex-col h-screen mx-auto">
 			<Toaster position="bottom-center" gutter={8} />
@@ -43,7 +43,7 @@ export function Layout({ children }: { children: ReactNode }) {
 							</li>
 						</ul>
 					</div>
-					<div className="flex-1 hidden md:flex text-lg font-semibold justify-center">
+					<div className="flex-1 hidden md:flex text-lg font-semibold">
 						<nav className="inline-flex flex-row items-center">
 							<Link
 								href="/dashboard"
