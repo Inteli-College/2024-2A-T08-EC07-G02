@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react';
-import { BaseLayout } from '@/src/components';
+import { BaseLayout } from '@components';
 import '@styles/globals.scss';
 
 export default function Layout({ children }: { children: ReactNode }): ReactElement {

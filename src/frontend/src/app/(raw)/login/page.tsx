@@ -48,7 +48,7 @@ export default function Login() {
 						label="Senha"
 						variant="bordered"
 						endContent={
-							<button className="focus:outline-none" type="button" onClick={toggleVisibility} aria-label="toggle password visibility">
+							<button className="focus:outline-none flex items-center" type="button" onClick={toggleVisibility} aria-label="toggle password visibility" style={{ height: '100%' }}>
 								{isVisible ? <FaRegEye className="text-xl text-gray-500" /> : <FaRegEyeSlash className="text-xl text-gray-500" />}
 							</button>
 						}
