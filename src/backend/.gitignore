@@ -47,6 +47,7 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
+cache
 nosetests.xml
 coverage.xml
 *.cover
@@ -177,6 +178,3 @@ pyrightconfig.json
 
 # VSCode
 .vscode
-
-# Docker cache
-cache

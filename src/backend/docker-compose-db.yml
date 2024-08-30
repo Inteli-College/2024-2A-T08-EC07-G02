@@ -9,4 +9,13 @@ services:
             POSTGRES_PASSWORD: postgres
             POSTGRES_DB: postgres
         volumes:
-            - ./cache:/var/lib/postgresql/data:z
+            - ./.cache/postgres:/var/lib/postgresql/data
+
+    duckdb:
+        build:
+            context: .
+            dockerfile: Dockerfile.duckdb
+        container_name: duckdb
+        command: duckdb ./database.duckdb
+        volumes:
+            - ./.cache/duckdb:/database
