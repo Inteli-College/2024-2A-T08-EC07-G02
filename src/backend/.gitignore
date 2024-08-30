@@ -178,3 +178,12 @@ pyrightconfig.json
 
 # VSCode
 .vscode
+
+# Duckdb / Test data
+*.duckdb
+*.csv
+*.parquet
+*.json
+
+# Dev tests
+*.parquet

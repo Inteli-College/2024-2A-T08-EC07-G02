@@ -11,11 +11,12 @@ services:
         volumes:
             - ./.cache/postgres:/var/lib/postgresql/data
 
-    duckdb:
-        build:
-            context: .
-            dockerfile: Dockerfile.duckdb
-        container_name: duckdb
-        command: duckdb ./database.duckdb
-        volumes:
-            - ./.cache/duckdb:/database
+    # Temporary disabled
+    #duckdb:
+    #    build:
+    #        context: .
+    #        dockerfile: Dockerfile.duckdb
+    #    container_name: duckdb
+    #    command: duckdb ./datalake.duckdb
+    #    volumes:
+    #        - ./.cache/duckdb:/database
