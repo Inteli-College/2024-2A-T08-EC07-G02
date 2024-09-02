@@ -15,7 +15,7 @@ class DataLake:
         return self.__conn.from_parquet(from_file)
 
     def load_dict(self, from_dict):
-        return self.__conn.from_df(pd.DataFrame.from_dict(from_dict))
+        return pd.DataFrame.from_dict(from_dict)
 
     def query_df(self, query):
         return self.__conn.execute(query).fetchdf()
@@ -34,8 +34,13 @@ class DataLake:
         self.register(df, "temp_table")
         self.__conn.execute(f"COPY temp_table TO '{to_file}' (FORMAT PARQUET)")
 
-    def register(self, df, table_name):
+    def save(self, df, table_name):
         self.__conn.register(table_name, df)
+
+    def append(self, df, table_name):
+        df = pd.DataFrame(df)
+        current_dataset = self.query_df(f"SELECT * FROM {table_name}")
+        self.save(pd.concat([current_dataset, df]), table_name)
 
     def close(self):
         self.__conn.close()
@@ -45,10 +50,6 @@ if __name__ == "__main__":
     import os
 
     dl = DataLake("datalake.duckdb")
-
-    tables = dl.list_tables()
-    print("\nList of tables in the database:")
-    print(tables)
 
     # Test loading Parquet file
     df_parquet = dl.load_parquet("./PIVOT_d2.parquet").to_df()
