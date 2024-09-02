@@ -14,7 +14,7 @@ Além dessas definições das rotas acima, elas podem ser melhor visualizadas na
 
 # Bibliografia:
 
-[1] O que é API? Guia de APIs para iniciantes. Redhat.com. Disponível em: <[https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces)>. Acesso em: 20 ago. 2    024.
+[1] O que é API? Guia de APIs para iniciantes. Redhat.com. Disponível em: [https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces). Acesso em: 20 ago. 2024.
 
 ‌
 
