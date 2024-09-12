@@ -186,6 +186,6 @@ pyrightconfig.json
 *.json
 *.onnx
 *.wal
-
+temp
 # Dev tests
 *.parquet

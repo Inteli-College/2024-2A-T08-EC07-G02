@@ -25,7 +25,7 @@ export default function Advanced() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8000/insertBase", {
+      const response = await fetch("http://localhost:3333/datalake", {
         method: "POST",
         body: formData,
       });
@@ -66,7 +66,7 @@ export default function Advanced() {
         {file && <p className="text-black mt-4">Arquivo selecionado: {file.name}</p>}
       </div>
 
-   
+
     </>
   );
 }
