@@ -52,6 +52,14 @@ class ModelService:
     def get_knr(self, KNR):
         return self.__datalake.query_df(f"SELECT * FROM dataset WHERE KNR = '{KNR}'")
 
+    def insert_datalake(self, csv_path):
+        df = self.__datalake.load_csv(csv_path)
+        self.__datalake.save(df, csv_path.split("/")[-1].split(".")[0])
+        return df
+
+    def list_datalakes(self):
+        return self.__datalake.list_tables()
+
 
 class ModelServiceSingleton:
     __instance = None

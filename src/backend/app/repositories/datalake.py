@@ -23,7 +23,7 @@ class DataLake:
     def query_list(self, query):
         return self.__conn.execute(query).fetchall()
 
-    def list_tables(self):
+    def list_tables(self) -> pd.DataFrame:
         return self.__conn.execute("SHOW ALL TABLES").fetchdf()
 
     def save_csv(self, df, to_file):
