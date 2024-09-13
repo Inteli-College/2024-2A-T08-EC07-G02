@@ -42,27 +42,29 @@ export default function Advanced() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center min-h-screen">
-        <input
+      <div className="flex justify-end space-x-4">
+
+      <input
           id="fileInput"
           type="file"
           accept=".csv"
           style={{ display: "none" }}
           onChange={handleFileChange}
         />
-        <button
-          className="text-slate-950 text-2xl text-center font-bold bg-amber-200 rounded-lg p-2 w-auto"
-          onClick={handleButtonClick}
-        >
-          Escolher base
-        </button>
-        <br />
-        <button
-          className="text-slate-950 text-2xl text-center font-bold bg-amber-200 rounded-lg p-2 w-auto"
-          onClick={handleUpload}
-        >
-          Enviar base
-        </button>
+        <div className="flex space-x-4">
+          <button
+            className="text-white text-2xl text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-lg p-2 w-auto"
+            onClick={handleButtonClick}
+          >
+            Escolher Base
+          </button>
+          <button
+            className="text-white text-2xl text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-lg p-2 w-auto"
+            onClick={handleUpload}
+          >
+            Enviar Base 
+          </button>
+        </div>
         {file && <p className="text-black mt-4">Arquivo selecionado: {file.name}</p>}
       </div>
 
