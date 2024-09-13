@@ -1,1 +1,1 @@
-from app import AppWrapper
+from .app import AppWrapper

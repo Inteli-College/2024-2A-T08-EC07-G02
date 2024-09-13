@@ -1,18 +1,15 @@
-from services import APIKeyService
-from fastapi import APIRouter, FastAPI, Request, Response
-from pydantic import BaseModel
+from fastapi import APIRouter, Depends
+from services.api_keys import APIKeyService
+from prisma import Prisma
+
+keys_router = APIRouter(prefix="/keys")
 
 
-api_keys_router = APIRouter()
+@keys_router.get("/")
+async def get_data() -> dict:
+    return {"keys": await APIKeyService.get_keys()}
 
 
-@api_keys_router.get("/api/keys")
-# Rota responsaável por acessar os dados enviados pela url
-async def get_data(request: Request, response: Response) -> dict:
-    return await APIKeyService.get_keys()
-
-
-@api_keys_router.post("/api/keys")
-# Rota responsaável por postar os dados que foram requisitados na url para o banco de dados
-async def create_key(request: Request, response: Response) -> dict:
+@keys_router.post("/")
+async def create_key() -> dict:
     return await APIKeyService.create_key()

@@ -1,2 +1,2 @@
 from .api_keys import APIKeyRepository
-from .datalake import DataLake
+from .knr import KNRRepository

@@ -4,7 +4,9 @@ from app import AppWrapper
 from fastapi.middleware.cors import CORSMiddleware
 from routes import setup as setup_routes
 import logging
+import dotenv
 
+dotenv.load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
 app_wrapper = AppWrapper()

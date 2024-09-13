@@ -1,13 +1,17 @@
-from .api_keys import api_keys_router
+from .api_keys import keys_router
 from .health_check import health_router
-from .model import predict_router
-from .datalake import datalake
+from .knr import knr_router
+from .datalake import datalake_router
 
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 
 
 def setup(app: FastAPI):
-    app.include_router(health_router)
-    app.include_router(api_keys_router)
-    app.include_router(predict_router)
-    app.include_router(datalake)
+    api_router = APIRouter(prefix="/api")
+
+    api_router.include_router(health_router)
+    api_router.include_router(keys_router)
+    api_router.include_router(knr_router)
+    api_router.include_router(datalake_router)
+
+    app.include_router(api_router)

@@ -1,10 +1,11 @@
 import secrets
+import uuid
 
 
 class Generator:
     @staticmethod
     def generate_api_key():
-        return f"presgen-{secrets.token_hex(4)}-{secrets.token_hex(4)}-{secrets.token_hex(4)}-{secrets.token_hex(8)}"
+        return f"presgen-{uuid.uuid4()}"
 
 
 if __name__ == "__main__":
