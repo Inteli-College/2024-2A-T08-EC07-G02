@@ -6,6 +6,8 @@ import os
 import io
 import logging
 from services import DatalakeService
+from typing import Optional
+
 
 datalake_router = APIRouter(prefix="/datalake")
 
@@ -57,4 +59,45 @@ async def get_list():
 
     except Exception as e:
         logger.exception("An error occurred while retrieving the list of tables.")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@datalake_router.get("/{table_name}")
+async def get_table(
+    table_name: str, page: int = 0, per_page: int = 10, knr_query: Optional[str] = None
+):
+    if page < 0 or per_page < 1:
+        error_msg = (
+            "Invalid pagination parameters. Page must be >= 0 and per_page must be > 0."
+        )
+        logger.error(error_msg)
+        raise HTTPException(status_code=400, detail=error_msg)
+
+    try:
+        table_df, total_count = DatalakeService.get_table_paginator(
+            table_name,
+            page=page,
+            per_page=per_page,
+            knr_query=knr_query,
+        )
+        logger.debug(f"Retrieved table '{table_name}' from the datalake.")
+
+        table_slice = table_df.to_dict(orient="records")
+
+        return {"data": table_slice, "total_count": total_count}
+
+    except Exception as e:
+        logger.exception(f"An error occurred while retrieving table '{table_name}'.")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@datalake_router.delete("/{table_name}")
+async def delete_table(table_name: str):
+    try:
+        DatalakeService.delete_table(table_name)
+        logger.info(f"Table '{table_name}' deleted successfully from the datalake.")
+        return JSONResponse(status_code=204, content={"message": "Table deleted."})
+
+    except Exception as e:
+        logger.exception(f"An error occurred while deleting table '{table_name}'.")
         raise HTTPException(status_code=500, detail=str(e))

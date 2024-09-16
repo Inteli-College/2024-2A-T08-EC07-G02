@@ -1,5 +1,6 @@
 from storage import Datalake
 import pandas as pd
+from typing import Optional
 
 
 class DatalakeService:
@@ -90,6 +91,45 @@ class DatalakeService:
             result = client.execute(query)
             print(f"Executed command: {query}")
             return result
+
+    @staticmethod
+    def get_table(table_name: str) -> pd.DataFrame:
+        with Datalake() as client:
+            df = client.execute(f"SELECT * FROM {table_name}").fetchdf()
+            print(f"Table '{table_name}' retrieved successfully.")
+            return df
+
+    @staticmethod
+    def get_table_paginator(
+        table_name: str,
+        page: int = 0,
+        per_page: int = 10,
+        knr_query: Optional[str] = None,
+    ) -> tuple[list[dict], int]:
+        with Datalake() as client:
+            offset = page * per_page
+
+            if knr_query:
+                data_query = (
+                    f"SELECT * FROM {table_name} WHERE KNR LIKE '%{knr_query}%'"
+                    f"LIMIT {per_page} OFFSET {offset}"
+                )
+                count_query = (
+                    f"SELECT COUNT(*) FROM {table_name} WHERE KNR LIKE '%{knr_query}%'"
+                )
+            else:
+                data_query = (
+                    f"SELECT * FROM {table_name} LIMIT {per_page} OFFSET {offset}"
+                )
+                count_query = f"SELECT COUNT(*) FROM {table_name}"
+
+            df = client.execute(data_query).fetchdf()
+            total_rows = client.execute(count_query).fetchone()[0]
+
+            print(
+                f"Table '{table_name}' retrieved successfully with pagination and KNR filter."
+            )
+            return df, total_rows
 
 
 if __name__ == "__main__":
