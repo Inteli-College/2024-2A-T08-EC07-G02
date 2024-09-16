@@ -187,8 +187,8 @@ A variável de ambiente `DATABASE_URL` é configurada para apontar para o banco 
 
 ## Referências
 
-[1] *AMAZON WEB SERVICES.* The difference between Docker images and containers. Disponível em: <https://aws.amazon.com/pt/compare/the-difference-between-docker-images-and-containers/>. Acesso em: 10 set. 2024.
+[1] *AMAZON WEB SERVICES.* The difference between Docker images and containers. Disponível em: [https://aws.amazon.com/pt/compare/the-difference-between-docker-images-and-containers/](https://aws.amazon.com/pt/compare/the-difference-between-docker-images-and-containers/). Acesso em: 10 set. 2024.
 
-[2] *IBM.* Docker: definição e benefícios. Disponível em: <https://www.ibm.com/br-pt/topics/docker>. Acesso em: 10 set. 2024.
+[2] *IBM.* Docker: definição e benefícios. Disponível em: [https://www.ibm.com/br-pt/topics/docker](https://www.ibm.com/br-pt/topics/docker). Acesso em: 10 set. 2024.
 
-[3] *LOCAWEB.* O que é Docker e por que usar? Disponível em: <https://www.locaweb.com.br/blog/temas/codigo-aberto/o-que-e-docker-e-por-que-usar/>. Acesso em: 10 set. 2024.
+[3] *LOCAWEB.* O que é Docker e por que usar? Disponível em: [https://www.locaweb.com.br/blog/temas/codigo-aberto/o-que-e-docker-e-por-que-usar/](https://www.locaweb.com.br/blog/temas/codigo-aberto/o-que-e-docker-e-por-que-usar/). Acesso em: 10 set. 2024.
