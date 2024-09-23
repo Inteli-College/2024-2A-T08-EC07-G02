@@ -1,13 +1,12 @@
 from fastapi import APIRouter, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 from typing import List
-import pandas as pd
 import os
 import io
 import logging
 from services import DatalakeService
 from typing import Optional
-
+from utils import read_file_param
 
 datalake_router = APIRouter(prefix="/datalake")
 
@@ -17,19 +16,7 @@ logger = logging.getLogger(__name__)
 @datalake_router.post("/")
 async def insert(file: UploadFile = File(...)):
     try:
-        content = await file.read()
-        file_extension = os.path.splitext(file.filename)[1].lower()
-
-        if file_extension == ".csv":
-            df = pd.read_csv(io.BytesIO(content))
-            logger.debug(f"CSV file '{file.filename}' read into DataFrame.")
-        elif file_extension == ".parquet":
-            df = pd.read_parquet(io.BytesIO(content))
-            logger.debug(f"Parquet file '{file.filename}' read into DataFrame.")
-        else:
-            error_msg = "Unsupported file type. Only CSV and Parquet are supported."
-            logger.error(error_msg)
-            raise HTTPException(status_code=400, detail=error_msg)
+        df = await read_file_param(file)
 
         table_name = os.path.splitext(file.filename)[0]
         logger.debug(f"Using table name '{table_name}' for insertion.")
