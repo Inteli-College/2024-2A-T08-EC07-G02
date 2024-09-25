@@ -4,3 +4,4 @@
 venv
 temp/
 venv/
+node_modules
