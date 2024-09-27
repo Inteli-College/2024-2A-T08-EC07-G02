@@ -29,29 +29,31 @@ O projeto intitulado "Sistema de Manutenção Preditiva com IA e Arquitetura em 
 
 ## Estrutura de Pastas
 ```bash
-.
-├── .github
-├── docs
-│   ├── docs
-│   │   ├── sprint-1
-│   │   ├── sprint-2
-│   │   ├── sprint-3
-│   │   ├── sprint-4
-│   │   ├── sprint-5
-│   │   └── intro.md
-├── src
-├── static
-│   ├── .gitignore
-│   ├── babel.config.js
-│   ├── docusaurus.config.js
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── README.md
-│   └── sidebars.js
-├── venv
-│   ├── .gitignore
-│   ├── README.md
-│   └── requirements.txt
+.github
+docs
+   ├── sprint-1
+   ├── sprint-2
+   ├── sprint-3 
+   ├── sprint-4
+   ├── sprint-5
+   └── intro.md
+src
+   ├── backend
+   ├── frontend
+static
+.gitignore
+README.md
+sidebars.js
+model
+   ├── FALHAS.csv
+   ├── RESULTADOS_02.csv
+   ├── RESULTADOS_02MERGED.csv
+   ├── RESULTADOS_04.csv
+   ├── RESULT_MERGED.csv
+   └── STATUS_PREDICTIONS.csv
+.gitignore
+README.md
+
 ````
 
 ## Guia de instrução 
@@ -64,7 +66,11 @@ Para executar o projeto, siga os passos abaixo:
 3. Abra o Arquivo Principal: No Visual Studio Code, abra o arquivo main.ipynb.
 
 4. Execute o Código: Com o arquivo aberto, clique em `Run All` para executar todas as células do notebook.
-   
+
+5. Execute o comando na pasta front-end `npm run dev` para rodar o as telas desenvolvidas.
+
+6. Execute o comando no arquivo `main.py` localizado na pasta `back-end/app`, `python main.py`. Assim, terá acesso as rotas do back-end do projeto.
+
 ## Documentação
 
 Para acessar a nossa documentação, clique [aqui](https://inteli-college.github.io/2024-2A-T08-EC07-G02/)!
