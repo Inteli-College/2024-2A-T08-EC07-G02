@@ -1,4 +1,4 @@
-# _Nome da solução_
+# _Presgen_
 Repositório do grupo _**Presgen**_
 
 ## Descrição do Projeto

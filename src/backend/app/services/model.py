@@ -6,18 +6,58 @@ import pandas as pd
 
 class ModelService:
     __session: rt.InferenceSession = None
+    __current_model: str = None
+    __base_path = "./temp/"
 
     @staticmethod
     def _initialize_model():
         if ModelService.__session is None:
-            model_path = os.path.join("./", os.getenv("MODEL_PATH"))
+            if ModelService.__current_model is None:
+                ModelService.__current_model = os.path.join(
+                    ModelService.__base_path, os.getenv("MODEL_PATH")
+                )
+
+            if ModelService.__current_model is None:
+                raise FileNotFoundError(
+                    "Model file not found in current environment, please set MODEL_PATH in environment or use update_model_path(new_model_path)"
+                )
+
+            if not os.path.exists(ModelService.__current_model):
+                raise FileNotFoundError(
+                    f"Model file '{ModelService.__current_model}' not found"
+                )
+
+            model_path = os.path.join(
+                ModelService.__base_path, ModelService.__current_model
+            )
             ModelService.__session = rt.InferenceSession(
                 model_path, providers=["CPUExecutionProvider"]
             )
 
     @staticmethod
-    def predict(knr: pd.DataFrame | dict) -> float:
+    def reload_model():
+        ModelService.__session = None
         ModelService._initialize_model()
+
+    @staticmethod
+    def get_model_path() -> str:
+        return ModelService.__current_model
+
+    @staticmethod
+    def update_model_path(new_model_path: str):
+        if not os.path.exists(new_model_path):
+            raise FileNotFoundError(f"Model file '{new_model_path}' not found")
+        ModelService.__current_model = new_model_path
+        ModelService.reload_model()
+
+    @staticmethod
+    def get_models() -> list[str]:
+        return os.listdir(ModelService.__base_path)
+
+    @staticmethod
+    def predict(knr: pd.DataFrame | dict) -> float:
+        if ModelService.__session is None:
+            ModelService._initialize_model()
 
         if isinstance(knr, dict):
             knr = pd.DataFrame([knr])
@@ -32,6 +72,12 @@ class ModelService:
         result = ModelService.__session.run([output_name], {input_name: input_data})[0]
         return result[0].item()
 
+    @staticmethod
+    def get_base_path() -> str:
+        return ModelService.__base_path
+
+
+os.makedirs(ModelService.get_base_path(), exist_ok=True)
 
 if __name__ == "__main__":
     import dotenv
