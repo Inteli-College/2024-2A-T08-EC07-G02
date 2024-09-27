@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df_fa = pd.read_csv("STATUS_to_ZPtime.csv")
+df_fa = pd.read_excel("STATUS_PREDICTOR_ANO.xlsx")
 
 
 ser = list(df_fa["KNR"])
