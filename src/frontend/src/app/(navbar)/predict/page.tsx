@@ -1,36 +1,164 @@
 'use client';
-import React, { useState } from 'react';
-import { CustomStepper, StepDetail } from '@components';
-import { FaCar, FaCogs, FaHammer, FaPaintBrush } from 'react-icons/fa';
-import { IoMdSettings } from 'react-icons/io';
+import React, { useState, useEffect } from 'react';
+import { DefaultService } from '@client';
+import {
+  Box,
+  Typography,
+  Container,
+  Paper,
+  CircularProgress,
+  Alert,
+  Grid,
+  Stepper,
+  Step,
+  StepLabel,
+  StepContent,
+  Card,
+  CardContent,
+} from '@mui/material';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import { CheckCircle, Error } from '@mui/icons-material';
 
-const steps = [
-	{ name: 'ZP1', icon: <FaHammer />, tooltip: 'Informação sobre ZP1', description: 'Detalhes do ZP1' },
-	{ name: 'ZP2', icon: <IoMdSettings />, tooltip: 'Informação sobre ZP2', description: 'Detalhes do ZP2' },
-	{ name: 'ZP3', icon: <IoMdSettings />, error: 'Error at Step 3', tooltip: 'Informação sobre ZP3' },
-	{ name: 'ZP4', icon: <IoMdSettings />, tooltip: 'Informação sobre ZP4', description: 'Detalhes do ZP4' },
-	{ name: 'ZP5', icon: <FaCar />, tooltip: 'Informação sobre ZP5', description: 'Detalhes do ZP5' },
-	{ name: 'ZP6', icon: <FaPaintBrush />, tooltip: 'Informação sobre ZP6', description: 'Detalhes do ZP6' },
-	{ name: 'ZP7', icon: <FaCogs />, tooltip: 'Informação sobre ZP7', description: 'Detalhes do ZP7' },
-] as StepDetail[];
+export default function LastProcessedKNR() {
+  const [knrData, setKnrData] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string>('');
 
-function ExampleUsage() {
-	const [currentStep, setCurrentStep] = useState(0);
+  useEffect(() => {
+    DefaultService.getLastKnrApiKnrLastProcessedGet()
+      .then((response: any) => {
+        setKnrData(response.knr);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Erro ao buscar o último KNR processado:', error);
+        setError('Falha ao buscar o último KNR processado.');
+        setLoading(false);
+      });
+  }, []);
 
-	const handleStepChange = (step: number) => {
-		console.log('Active step is:', step);
-		setCurrentStep(step);
-	};
+  if (loading) {
+    return (
+      <Container maxWidth="md">
+        <Box display="flex" justifyContent="center" sx={{ mt: 4 }}>
+          <CircularProgress />
+        </Box>
+      </Container>
+    );
+  }
 
-	return (
-		<div>
-			<CustomStepper steps={steps} currentStep={currentStep} onStepChange={handleStepChange} />
-			<div style={{ marginTop: '20px' }}>
-				<button onClick={() => setCurrentStep((prev) => Math.max(prev - 1, 0))}>Back</button>
-				<button onClick={() => setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1))}>Next</button>
-			</div>
-		</div>
-	);
+  if (error) {
+    return (
+      <Container maxWidth="md">
+        <Alert severity="error" sx={{ mt: 4 }}>
+          {error}
+        </Alert>
+      </Container>
+    );
+  }
+
+  if (!knrData) {
+    return (
+      <Container maxWidth="md">
+        <Alert severity="info" sx={{ mt: 4 }}>
+          Nenhum dado de KNR disponível no momento.
+        </Alert>
+      </Container>
+    );
+  }
+
+  const predictionText = knrData.prediction === 'FAILURE' ? 'FALHA' : 'NORMAL';
+  const predictionColor = knrData.prediction === 'FAILURE' ? 'error' : 'success';
+  const predictionIcon =
+    knrData.prediction === 'FAILURE' ? (
+      <Error color="error" sx={{ mr: 1 }} />
+    ) : (
+      <CheckCircle color="success" sx={{ mr: 1 }} />
+    );
+
+  const steps = [
+    'Recebimento do veículo',
+    'Inspeção inicial',
+    'Análise de dados',
+    'Conclusão',
+  ];
+
+  const currentStep =
+    knrData.prediction === 'FAILURE' ? steps.length - 1: steps.length;
+
+  return (
+    <Container maxWidth="md">
+      <Paper sx={{ padding: 4, marginTop: 4 }} elevation={3}>
+        <Typography
+          variant="h4"
+          component="div"
+          gutterBottom
+          sx={{ textAlign: 'center', fontWeight: 'bold' }}
+        >
+          Análise do Último Veículo Processado
+        </Typography>
+        <Grid container spacing={4} sx={{ mt: 2 }}>
+          <Grid item xs={12} md={6}>
+            <Box
+              sx={{
+                border: 1,
+                borderColor: 'grey.300',
+                borderRadius: 2,
+                padding: 2,
+                backgroundColor: '#f9f9f9',
+              }}
+            >
+              <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+                Detalhes do Veículo
+              </Typography>
+              <Typography variant="body1">
+                <strong>ID do Veículo:</strong> {knrData.id}
+              </Typography>
+              <Typography variant="body1" sx={{ mt: 1 }}>
+                <strong>Status da Análise:</strong>{' '}
+                <Box
+                  component="span"
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    color: `${predictionColor}.main`,
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {predictionIcon}
+                  {predictionText}
+                </Box>
+              </Typography>
+              <Typography variant="body1" sx={{ mt: 1 }}>
+                <strong>Data da Atualização:</strong>{' '}
+                {format(new Date(knrData.updated_at), "dd 'de' MMMM 'de' yyyy 'às' HH:mm", {
+                  locale: ptBR,
+                })}
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Stepper activeStep={currentStep} orientation="vertical">
+              {steps.map((label, index) => (
+                <Step key={label} completed={index < currentStep}>
+                  <StepLabel>{label}</StepLabel>
+                  <StepContent>
+                    <Typography variant="body2">
+                      {index === 0 && 'Veículo recebido para análise.'}
+                      {index === 1 && 'Realização de inspeção visual e funcional.'}
+                      {index === 2 && 'Processamento e análise dos dados coletados.'}
+                      {index === 3 && knrData.prediction === 'FAILURE'
+                        ? <Alert severity="error">Possível falha detectada na análise.</Alert>
+                        : 'Nenhuma falha detectada.'}
+                    </Typography>
+                  </StepContent>
+                </Step>
+              ))}
+            </Stepper>
+          </Grid>
+        </Grid>
+      </Paper>
+    </Container>
+  );
 }
-
-export default ExampleUsage;

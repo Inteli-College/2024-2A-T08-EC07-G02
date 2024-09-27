@@ -3,7 +3,7 @@
 import type { CancelablePromise } from './core/CancelablePromise';
 import { OpenAPI } from './core/OpenAPI';
 import { request as __request } from './core/request';
-import type { HealthCheckHealthGetResponse, GetDataApiKeysGetResponse, CreateKeyApiKeysPostResponse, PredictApiKnrPredictGetData, PredictApiKnrPredictGetResponse, ListApiKnrListGetResponse, NewKnrApiKnrNewPostResponse } from './types.gen';
+import type { HealthCheckApiHealthGetResponse, GetDataApiKeysGetResponse, CreateKeyApiKeysPostResponse, PredictApiKnrPredictKnrGetData, PredictApiKnrPredictKnrGetResponse, ListApiKnrGetResponse, NewKnrApiKnrPostData, NewKnrApiKnrPostResponse, GetKnrApiKnrKnrGetData, GetKnrApiKnrKnrGetResponse, GetLastKnrApiKnrLastProcessedGetResponse, GetListApiDatalakeGetResponse, InsertApiDatalakePostData, InsertApiDatalakePostResponse, GetTableApiDatalakeTableNameGetData, GetTableApiDatalakeTableNameGetResponse, DeleteTableApiDatalakeTableNameDeleteData, DeleteTableApiDatalakeTableNameDeleteResponse, RequestApiModelTrainPostData, RequestApiModelTrainPostResponse, ListModelsApiModelGetResponse, DownloadModelApiModelDownloadModelIdGetData, DownloadModelApiModelDownloadModelIdGetResponse, GetCheckupTimeChartApiChartsCheckupTimeGetResponse, GetFreqErrosChartApiChartsFreqErrosGetResponse } from './types.gen';
 
 export class DefaultService {
     /**
@@ -11,10 +11,10 @@ export class DefaultService {
      * @returns unknown Successful Response
      * @throws ApiError
      */
-    public static healthCheckHealthGet(): CancelablePromise<HealthCheckHealthGetResponse> {
+    public static healthCheckApiHealthGet(): CancelablePromise<HealthCheckApiHealthGetResponse> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/health'
+            url: '/api/health'
         });
     }
     
@@ -26,7 +26,7 @@ export class DefaultService {
     public static getDataApiKeysGet(): CancelablePromise<GetDataApiKeysGetResponse> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/keys'
+            url: '/api/keys/'
         });
     }
     
@@ -38,23 +38,24 @@ export class DefaultService {
     public static createKeyApiKeysPost(): CancelablePromise<CreateKeyApiKeysPostResponse> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/keys'
+            url: '/api/keys/'
         });
     }
     
     /**
      * Predict
      * @param data The data for the request.
-     * @param data.requestBody
+     * @param data.knr
      * @returns unknown Successful Response
      * @throws ApiError
      */
-    public static predictApiKnrPredictGet(data: PredictApiKnrPredictGetData): CancelablePromise<PredictApiKnrPredictGetResponse> {
+    public static predictApiKnrPredictKnrGet(data: PredictApiKnrPredictKnrGetData): CancelablePromise<PredictApiKnrPredictKnrGetResponse> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/knr/predict',
-            body: data.requestBody,
-            mediaType: 'application/json',
+            url: '/api/knr/predict/{knr}',
+            path: {
+                knr: data.knr
+            },
             errors: {
                 422: 'Validation Error'
             }
@@ -66,22 +67,215 @@ export class DefaultService {
      * @returns unknown Successful Response
      * @throws ApiError
      */
-    public static listApiKnrListGet(): CancelablePromise<ListApiKnrListGetResponse> {
+    public static listApiKnrGet(): CancelablePromise<ListApiKnrGetResponse> {
         return __request(OpenAPI, {
             method: 'GET',
-            url: '/api/knr/list'
+            url: '/api/knr/'
         });
     }
     
     /**
      * New Knr
+     * @param data The data for the request.
+     * @param data.requestBody
      * @returns unknown Successful Response
      * @throws ApiError
      */
-    public static newKnrApiKnrNewPost(): CancelablePromise<NewKnrApiKnrNewPostResponse> {
+    public static newKnrApiKnrPost(data: NewKnrApiKnrPostData): CancelablePromise<NewKnrApiKnrPostResponse> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/knr/new'
+            url: '/api/knr/',
+            body: data.requestBody,
+            mediaType: 'application/json',
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Get Knr
+     * @param data The data for the request.
+     * @param data.knr
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static getKnrApiKnrKnrGet(data: GetKnrApiKnrKnrGetData): CancelablePromise<GetKnrApiKnrKnrGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/knr/{knr}',
+            path: {
+                knr: data.knr
+            },
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Get Last Knr
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static getLastKnrApiKnrLastProcessedGet(): CancelablePromise<GetLastKnrApiKnrLastProcessedGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/knr/last/processed'
+        });
+    }
+    
+    /**
+     * Get List
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static getListApiDatalakeGet(): CancelablePromise<GetListApiDatalakeGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/datalake/'
+        });
+    }
+    
+    /**
+     * Insert
+     * @param data The data for the request.
+     * @param data.formData
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static insertApiDatalakePost(data: InsertApiDatalakePostData): CancelablePromise<InsertApiDatalakePostResponse> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/datalake/',
+            formData: data.formData,
+            mediaType: 'multipart/form-data',
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Get Table
+     * @param data The data for the request.
+     * @param data.tableName
+     * @param data.page
+     * @param data.perPage
+     * @param data.knrQuery
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static getTableApiDatalakeTableNameGet(data: GetTableApiDatalakeTableNameGetData): CancelablePromise<GetTableApiDatalakeTableNameGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/datalake/{table_name}',
+            path: {
+                table_name: data.tableName
+            },
+            query: {
+                page: data.page,
+                per_page: data.perPage,
+                knr_query: data.knrQuery
+            },
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Delete Table
+     * @param data The data for the request.
+     * @param data.tableName
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static deleteTableApiDatalakeTableNameDelete(data: DeleteTableApiDatalakeTableNameDeleteData): CancelablePromise<DeleteTableApiDatalakeTableNameDeleteResponse> {
+        return __request(OpenAPI, {
+            method: 'DELETE',
+            url: '/api/datalake/{table_name}',
+            path: {
+                table_name: data.tableName
+            },
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Request
+     * @param data The data for the request.
+     * @param data.formData
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static requestApiModelTrainPost(data: RequestApiModelTrainPostData): CancelablePromise<RequestApiModelTrainPostResponse> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/model/train',
+            formData: data.formData,
+            mediaType: 'multipart/form-data',
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * List Models
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static listModelsApiModelGet(): CancelablePromise<ListModelsApiModelGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/model/'
+        });
+    }
+    
+    /**
+     * Download Model
+     * @param data The data for the request.
+     * @param data.modelId
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static downloadModelApiModelDownloadModelIdGet(data: DownloadModelApiModelDownloadModelIdGetData): CancelablePromise<DownloadModelApiModelDownloadModelIdGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/model/download/{model_id}',
+            path: {
+                model_id: data.modelId
+            },
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Get Checkup Time Chart
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static getCheckupTimeChartApiChartsCheckupTimeGet(): CancelablePromise<GetCheckupTimeChartApiChartsCheckupTimeGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/charts/checkup_time'
+        });
+    }
+    
+    /**
+     * Get Freq Erros Chart
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static getFreqErrosChartApiChartsFreqErrosGet(): CancelablePromise<GetFreqErrosChartApiChartsFreqErrosGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/charts/freq_erros'
         });
     }
     

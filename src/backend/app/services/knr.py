@@ -1,5 +1,6 @@
 from repositories import KNRRepository
 from prisma import enums
+from pipelines import ModelPipeline
 
 
 class KNRService:
@@ -14,6 +15,10 @@ class KNRService:
         data: dict,
         prediction: enums.PredictResult = enums.PredictResult.NOT_PROCESSED,
     ) -> dict:
+        results_df = pd.DataFrame(data["results"])
+        status_df = pd.DataFrame(data["status"])
+        pipeline = ModelPipeline(None, results_df, status_df)
+        result = pipeline.run(None)
         knr = await KNRRepository.create(id=id, data=data, prediction=prediction)
         return dict(knr)
 

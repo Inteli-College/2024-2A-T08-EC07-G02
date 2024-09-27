@@ -2,9 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from app import AppWrapper
 from fastapi.middleware.cors import CORSMiddleware
-from routes import setup as setup_routes 
-from routes.knr import knr_router
-from routes.charts_router import charts_router
+from routes import setup as setup_routes
 import logging
 import dotenv
 
@@ -13,7 +11,7 @@ dotenv.load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
 app_wrapper = AppWrapper()
-app = app_wrapper.get_app()  
+app = app_wrapper.get_app()
 
 app.add_middleware(
     CORSMiddleware,
@@ -22,9 +20,6 @@ app.add_middleware(
     allow_credentials=True,
     allow_origins=["*"],
 )
-
-app.include_router(knr_router)  
-app.include_router(charts_router)  
 
 setup_routes(app)
 

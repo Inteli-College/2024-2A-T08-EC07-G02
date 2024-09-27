@@ -5,4 +5,5 @@ export default {
 	services: {
 		asClass: true,
 	},
-};
+	base: 'http://localhost:3333',
+}

@@ -17,6 +17,9 @@ async def read_file_param(file: UploadFile) -> pd.DataFrame:
     elif file_extension == ".parquet":
         df = pd.read_parquet(io.BytesIO(content))
         logger.debug(f"Parquet file '{file.filename}' read into DataFrame.")
+    elif file_extension == ".xlsx":
+        df = pd.read_excel(io.BytesIO(content))
+        logger.debug(f"Excel file '{file.filename}' read into DataFrame.")
     else:
         error_msg = "Unsupported file type. Only CSV and Parquet are supported."
         logger.error(error_msg)

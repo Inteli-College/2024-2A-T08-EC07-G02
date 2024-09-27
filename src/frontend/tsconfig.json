@@ -23,7 +23,9 @@
 			"@hooks/*": ["src/hooks/*"],
 			"@lib/*": ["src/lib/*"],
 			"@pages/*": ["src/pages/*"],
-			"@utils/*": ["src/utils/*"]
+			"@utils/*": ["src/utils/*"],
+			"@client/*": ["src/client/*"],
+			"@client": ["src/client"]
 		},
 		"incremental": true,
 		"plugins": [
