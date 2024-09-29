@@ -14,7 +14,8 @@ import {
   Spinner,
 } from "@nextui-org/react";
 import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
-import axios from "axios";
+import {DefaultService} from "@client";
+
 
 export default function DatalakeTable() {
   const [datalakes, setDatalakes] = useState([]);
@@ -30,11 +31,13 @@ export default function DatalakeTable() {
     const fetchDatalakes = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3333/api/datalake");
-        const datalakeObjects = response.data.tables.map((name, index) => ({
-          id: index,
-          name: name,
-        }));
+
+		const response: any = await DefaultService.getListApiDatalakeGet();
+
+		const datalakeObjects = response.tables.map((name, index) => ({
+			id: index,
+			name: name,
+		  }));
         setDatalakes(datalakeObjects);
       } catch (error) {
         console.error("Error fetching datalakes:", error);
@@ -55,18 +58,14 @@ export default function DatalakeTable() {
   const fetchDatalakeData = async (datalakeName, pageNumber) => {
     setDataLoading(true);
     try {
-      const response = await axios.get(
-        `http://localhost:3333/api/datalake/${datalakeName}`,
-		{
-		  params: {
-				page: pageNumber,
-				per_page: 5,
-				knr_query: knrQuery,
-			}
-		}
-      );
-      setSelectedDatalakeData(response.data.data);
-      const totalCount = response.data.total_count;
+	  const response: any = await DefaultService.getTableApiDatalakeTableNameGet({
+		tableName: datalakeName,
+		page: pageNumber,
+		perPage: 5,
+		knrQuery: knrQuery,
+	  });
+      setSelectedDatalakeData(response.data);
+      const totalCount = response.total_count;
       setTotalPages(Math.ceil(totalCount / 10));
     } catch (error) {
       console.error("Error fetching datalake data:", error);
