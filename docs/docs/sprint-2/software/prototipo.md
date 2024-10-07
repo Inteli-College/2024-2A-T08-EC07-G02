@@ -26,3 +26,51 @@ Tela de feedback projetada para indicar falhas identificadas em um veículo apó
 ![Okay](/img/wireframe-ok.png)
 
 Tela de feedback positivo informa que não foram detectadas falhas no veículo após a análise do KNR. No topo, o título "Feedback" é seguido por um ícone de marca de verificação verde, simbolizando que o veículo está em conformidade. A seção "Identificador de falhas" na parte inferior está vazia, indicando que não há problemas a reportar.
+
+# Jornada de Usuário na Aplicação
+
+A jornada do usuário foi projetada para garantir uma experiência intuitiva e eficiente em cada etapa de interação com a aplicação. Cada ponto da jornada foi planejada para facilitar o uso, minimizar frustrações e garantir que as informações necessárias estejam acessíveis de maneira rápida e clara para os funcionários da Volkswagen.
+
+## 1. Acesso à Aplicação
+
+O primeiro contato do usuário com a aplicação ocorre na **tela de login**. Ao acessar o sistema, o usuário é direcionado para uma interface limpa e objetiva. Nessa tela, ele insere seu **usuário** e **senha**, visualizando claramente os campos de preenchimento e o botão "Entrar". A presença do logo no topo reforça a identidade visual do grupo, dando uma sensação de familiaridade e profissionalismo ao usuário.
+
+- **Objetivo**: Autenticar o usuário para garantir acesso seguro às funcionalidades.
+- **Ação**: O usuário insere as credenciais e clica em "Entrar".
+- **Resultado esperado**: O usuário é redirecionado ao dashboard após a validação bem-sucedida.
+
+## 2. Visualização de Dados no Dashboard
+
+Após a autenticação, o usuário é levado à tela do **dashboard**, onde pode visualizar informações importantes de maneira clara e organizada. Gráficos são apresentados em seções, cada um com um título descritivo que permite a rápida identificação do conteúdo. Essa visualização ajuda o usuário a monitorar os principais indicadores e a tomar decisões informadas.
+
+- **Objetivo**: Fornecer uma visão geral dos dados em um layout intuitivo.
+- **Ação**: O usuário visualiza os gráficos e acessa as informações que deseja.
+- **Resultado esperado**: O usuário consegue navegar facilmente pelos dados e entender o panorama geral do sistema.
+
+## 3. Inserção de Dados no Sistema
+
+Para utilizar as funcionalidades de predição de falhas, o usuário acessa a **tela de input de pesquisa**. Nessa etapa, ele insere o **KNR** (Número de Identificação do Veículo) no campo de entrada e clica no botão "Enviar". Essa interação permite ao sistema realizar a análise de falhas com base nas informações inseridas.
+
+- **Objetivo**: Permitir a inserção de KNR para análise pelo modelo preditivo.
+- **Ação**: O usuário insere o KNR e submete a informação.
+- **Resultado esperado**: O sistema processa o KNR e redireciona o usuário para a próxima etapa, que é a tela de feedback.
+
+## 4. Feedback - Falha Encontrada
+
+Se forem detectadas falhas no veículo após a análise, o usuário é levado para a **tela de feedback com falhas encontradas**. Nessa tela, ele vê claramente as falhas reportadas, categorizadas de acordo com a severidade. Cada falha é descrita com informações sobre a etapa da produção em que ocorreu, permitindo que o usuário entenda a natureza do problema e a ação necessária.
+
+- **Objetivo**: Informar o usuário sobre as falhas encontradas no veículo.
+- **Ação**: O usuário visualiza as falhas, compreendendo a extensão dos problemas.
+- **Resultado esperado**: O usuário tem clareza sobre as falhas e pode tomar as medidas necessárias.
+
+## 5. Feedback - Nenhuma Falha Encontrada
+
+Caso não sejam detectadas falhas no veículo, o usuário é redirecionado para a **tela de feedback sem falhas**. Nessa etapa, ele visualiza uma mensagem confirmando que o veículo está em conformidade, com o ícone de marca de verificação verde no topo, sinalizando o sucesso da análise.
+
+- **Objetivo**: Informar o usuário que não foram encontradas falhas no veículo.
+- **Ação**: O usuário visualiza a confirmação de que o veículo está em conformidade.
+- **Resultado esperado**: O usuário tem a confirmação de que o veículo está livre de problemas e pode prosseguir com segurança.
+
+---
+
+A jornada do usuário foi desenhada para ser intuitiva, garantindo uma navegação fluida entre as diferentes funcionalidades da aplicação. O foco está na clareza e na eficiência, proporcionando uma experiência sem fricções, desde o login até o feedback final.
