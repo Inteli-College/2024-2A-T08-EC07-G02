@@ -45,3 +45,5 @@ if __name__ == "__main__":
     with Datalake() as client:
         client.execute(f"INSERT INTO {table_name} SELECT * FROM df", {"df": df})
         print(f"Data inserted into table '{table_name}' successfully.")
+        print(1)
+
