@@ -11,10 +11,7 @@ class Datalake:
         # Set up AWS S3 credentials
         self.s3_key_id = os.getenv("AWS_ACCESS_KEY_ID")
         self.s3_secret = os.getenv("AWS_SECRET_ACCESS_KEY")
-        self.s3_region = os.getenv("AWS_SESSION_TOKEN")
-
-        # Configure DuckDB to connect to S3
-        self.configure_s3()
+        self.s3_region = os.getenv("REGION")
 
     @property
     def duckdb(self) -> duckdb.DuckDBPyConnection:
@@ -40,10 +37,29 @@ if __name__ == "__main__":
     import dotenv
     dotenv.load_dotenv()   
     table_name = 'testegd'
+    
+    # Sample DataFrame
     data = {'col_1': [3, 2, 1, 0], 'col_2': ['a', 'b', 'c', 'd']}
     df = pd.DataFrame.from_dict(data)
+    
+    # Connect to DuckDB and create the table if it doesn't exist
     with Datalake() as client:
-        client.execute(f"INSERT INTO {table_name} SELECT * FROM df", {"df": df})
-        print(f"Data inserted into table '{table_name}' successfully.")
-        print(1)
+        # Create table based on DataFrame schema if it doesn't exist
+        client.execute(f"""
+            CREATE TABLE IF NOT EXISTS {table_name} (
+                col_1 INTEGER,
+                col_2 VARCHAR
+            );
+        """)
 
+        # Register the DataFrame as a temporary DuckDB table
+        client.register('df_temp', df)
+        
+        # Insert data into the table
+        client.execute(f"INSERT INTO {table_name} SELECT * FROM df_temp")
+
+        # Export the table to AWS S3 in CSV format
+        s3_bucket = "s3://volksduckdb/testegd.csv"
+        client.execute(f"COPY (SELECT * FROM {table_name}) TO '{s3_bucket}' (FORMAT CSV, HEADER TRUE);")
+        
+        print(f"Data inserted into table '{table_name}' and exported to S3 bucket successfully.")
