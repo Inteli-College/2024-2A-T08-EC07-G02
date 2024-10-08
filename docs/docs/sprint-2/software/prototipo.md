@@ -33,15 +33,15 @@ A jornada do usuário foi projetada para garantir uma experiência intuitiva e e
 
 ## 1. Acesso à Aplicação
 
-O primeiro contato do usuário com a aplicação ocorre na **tela de login**. Ao acessar o sistema, o usuário é direcionado para uma interface limpa e objetiva. Nessa tela, ele insere seu **usuário** e **senha**, visualizando claramente os campos de preenchimento e o botão "Entrar". A presença do logo no topo reforça a identidade visual do grupo, dando uma sensação de familiaridade e profissionalismo ao usuário.
+O primeiro contato do usuário com a aplicação ocorre na **tela de login**. Ao acessar o sistema, o usuário é direcionado para uma interface limpa e objetiva. Nessa tela, ele insere seu **usuário** e **senha**, visualizando claramente os campos de preenchimento e o botão "Entrar".
 
 - **Objetivo**: Autenticar o usuário para garantir acesso seguro às funcionalidades.
 - **Ação**: O usuário insere as credenciais e clica em "Entrar".
-- **Resultado esperado**: O usuário é redirecionado ao dashboard após a validação bem-sucedida.
+- **Resultado esperado**: O usuário é redirecionado ao dashboard após a validação.
 
 ## 2. Visualização de Dados no Dashboard
 
-Após a autenticação, o usuário é levado à tela do **dashboard**, onde pode visualizar informações importantes de maneira clara e organizada. Gráficos são apresentados em seções, cada um com um título descritivo que permite a rápida identificação do conteúdo. Essa visualização ajuda o usuário a monitorar os principais indicadores e a tomar decisões informadas.
+Após a autenticação, o usuário é levado à tela de **dashboard**, onde pode visualizar informações importantes de maneira clara e organizada. Gráficos são apresentados em seções, cada um com um título descritivo que permite a rápida identificação do conteúdo. Essa visualização ajuda o usuário a monitorar os principais indicadores e a tomar decisões informadas.
 
 - **Objetivo**: Fornecer uma visão geral dos dados em um layout intuitivo.
 - **Ação**: O usuário visualiza os gráficos e acessa as informações que deseja.
@@ -57,11 +57,11 @@ Para utilizar as funcionalidades de predição de falhas, o usuário acessa a **
 
 ## 4. Feedback - Falha Encontrada
 
-Se forem detectadas falhas no veículo após a análise, o usuário é levado para a **tela de feedback com falhas encontradas**. Nessa tela, ele vê claramente as falhas reportadas, categorizadas de acordo com a severidade. Cada falha é descrita com informações sobre a etapa da produção em que ocorreu, permitindo que o usuário entenda a natureza do problema e a ação necessária.
+Se forem detectadas falhas no veículo após a análise, o usuário é levado para a **tela de feedback com falhas encontradas**. Nessa tela, ele vê as falhas reportadas, categorizadas de acordo com a quantidade. Cada falha é descrita com informações sobre a etapa da produção em que ocorreu, permitindo que o usuário entenda a natureza do problema e a ação necessária.
 
 - **Objetivo**: Informar o usuário sobre as falhas encontradas no veículo.
 - **Ação**: O usuário visualiza as falhas, compreendendo a extensão dos problemas.
-- **Resultado esperado**: O usuário tem clareza sobre as falhas e pode tomar as medidas necessárias.
+- **Resultado esperado**: O usuário tem clareza sobre as falhas.
 
 ## 5. Feedback - Nenhuma Falha Encontrada
 
