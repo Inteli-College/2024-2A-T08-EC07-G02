@@ -1,0 +1,9 @@
+# Sprint 4
+
+Da Sprint 3 para a Sprint 4, as principais mudanças focaram na preparação e manipulação dos dados.
+
+## Processo ETL
+Na Sprint 4, foi introduzido o processo de ETL (Extract, Transform, Load), fundamental para garantir que os dados fossem preparados adequadamente para análise e treinamento do modelo de machine learning. A fase de extração envolveu a coleta de dados brutos de várias fontes, como arquivos XLSX, CSV e PARQUET fornecidos pela Volkswagen. Na etapa de transformação, os dados passaram por processos de limpeza, remoção de valores nulos, padronização de formatos e criação de novas features. O objetivo era garantir que os dados fossem consistentes e prontos para serem usados no treinamento do modelo. A fase de carga envolveu a inserção dos dados transformados diretamente no ambiente do sistema, prontos para o modelo processá-los. Esse processo de ETL foi uma novidade na Sprint 4, visto que nas sprints anteriores o foco estava na modelagem preditiva e na implementação de APIs.
+
+## Retreino do Modelo
+Foi a introduzido um fluxo de retreino de modelos, que permitiu o ajuste e o aperfeiçoamento do sistema à medida que novos dados eram incorporados. Esse retreino automatizado possibilitava que o modelo de machine learning se mantivesse atualizado com os dados mais recentes, melhorando continuamente sua acurácia e capacidade de prever falhas. O processo de retreino foi desenhado para ser acessível através de uma interface, permitindo que os engenheiros de dados subissem novas bases de dados e retreinassem o modelo diretamente no sistema. Essa funcionalidade era inexistente nas sprints anteriores, que estavam mais focadas na criação e implementação dos modelos iniciais​.
