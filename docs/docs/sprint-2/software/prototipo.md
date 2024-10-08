@@ -70,7 +70,3 @@ Caso não sejam detectadas falhas no veículo, o usuário é redirecionado para 
 - **Objetivo**: Informar o usuário que não foram encontradas falhas no veículo.
 - **Ação**: O usuário visualiza a confirmação de que o veículo está em conformidade.
 - **Resultado esperado**: O usuário tem a confirmação de que o veículo está livre de problemas e pode prosseguir com segurança.
-
----
-
-A jornada do usuário foi desenhada para ser intuitiva, garantindo uma navegação fluida entre as diferentes funcionalidades da aplicação. O foco está na clareza e na eficiência, proporcionando uma experiência sem fricções, desde o login até o feedback final.
