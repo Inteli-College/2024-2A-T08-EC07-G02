@@ -1,0 +1,12 @@
+# Sprint 2
+
+Da Sprint 1 para Sprint 2, o projeto evoluiu bastante em relação ao Software.
+
+## Funcionalidade da API
+Na Sprint 2, foi introduzida uma API para facilitar a comunicação entre o frontend e o backend, permitindo a captura e envio de dados via rotas específicas. Foram implementadas rotas como @api_keys_router.get("/api/keys") para pegar dados enviados via formulário e @api_keys_router.post("/api/keys") para capturar os dados fornecidos e enviar ao banco de dados. Essas rotas possibilitam a comunicação entre o sistema e o banco de dados, permitindo interações em tempo real. Além disso, foi criada uma rota @api_keys_router.get("/health") para validar o status do sistema. Na Sprint 1, o foco estava no desenvolvimento inicial do modelo preditivo e nos aspectos de negócios, sem a implementação de APIs para essa comunicação​.
+
+## Modelos Implementados
+Na Sprint 2, foram adicionados novos modelos de aprendizado de máquina ao projeto. O modelo de Suporte Vetorial (SVM) foi implementado, destacando-se por sua robustez ao lidar com variáveis de alta dimensionalidade. O SVM foi avaliado em termos de acurácia, precisão, recall e F1-Score, apresentando uma acurácia de 0.9765 e boa performance geral. Além disso, um modelo de Redes Neurais Recorrentes (RNN) também foi incorporado, aproveitando sua capacidade de capturar padrões em dados sequenciais. O modelo RNN atingiu uma acurácia de 0.9843, mostrando-se promissor para capturar dependências temporais nos dados. Na Sprint 1, os modelos Random Forest e Gradient Boosting Machines (GBM) foram explorados mais a fundo, sendo o GBM recomendado inicialmente por sua precisão e capacidade de capturar interações complexas entre variáveis.
+
+## Prototipagem de Interface
+Na Sprint 2, o design de mockups para as interfaces de login e dashboard foi iniciado, algo que não havia sido contemplado na Sprint 1, onde o foco estava principalmente na modelagem preditiva e nos aspectos de negócios e experiência do usuário. A interface de login foi projetada para autenticação segura, enquanto o dashboard foi idealizado para fornecer uma visualização clara dos dados preditivos e resultados gerados pelo modelo. A implementação dessas interfaces visava melhorar a experiência do usuário, permitindo uma navegação intuitiva. Na Sprint 1, a parte visual ainda não havia sido trabalhada.
