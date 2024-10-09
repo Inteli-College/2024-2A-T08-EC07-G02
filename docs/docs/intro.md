@@ -23,7 +23,8 @@ O projeto se baseira na criação de uma solução com modelo preditivo para ind
 
 ## Instrutores:
 
--   [Geraldo Magela Severino Vasconcelos](https://www.linkedin.com/in/geraldo-magela-severino-vasconcelos-22b1b220/) 
+-   [Ricardo José Missori](https://www.linkedin.com/in/ricardo-jos%C3%A9-missori/)
+-   [Geraldo Magela Severino Vasconcelos](https://www.linkedin.com/in/geraldo-magela-severino-vasconcelos-22b1b220/)
 -   [Guilherme Cestari](https://www.linkedin.com/in/gui-cestari/)
 -   [Lisane Valdo](https://www.linkedin.com/in/lisane-valdo/)
 -   [Monica Anastassiu](https://www.linkedin.com/in/monica-anastassiu-d-sc-2568522/)
