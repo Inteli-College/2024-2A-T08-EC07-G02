@@ -1,5 +1,9 @@
 # Processo ETL (Extract Load Transform)
 
+Nesta quarta sprint o processo de dados e confecção dos mesmos continuou sendo trabalhado com os mesmos da sprint anterior. Assim, nessa sprint foi aplicada um novo processo de ETL em cima deles para que haja um fluxo das diferentes fontes, extração deles e transformação para os dados que serão utilizados no projeto.
+Sendo assim, para saber mais sobre a sprint anterior (sprint 3) acesse
+: [https://github.com/Inteli-College/2024-2A-T08-EC07-G02/tree/main/docs/docs/sprint-3/software](https://github.com/Inteli-College/2024-2A-T08-EC07-G02/tree/main/docs/docs/sprint-3/software)
+
 ## Conceito
 
 O processo ETL, sigla para Extract, Transform, Load, é um conjunto de procedimentos utilizado para integrar, transformar e carregar dados de diferentes fontes em um sistema de armazenamento centralizado, como um data warehouse. Este processo é amplamente utilizado em ambientes de business intelligence (BI), data warehousing e data analytics para consolidar e preparar dados de forma eficiente para análise. Ele é dividido em três etapas principais:
