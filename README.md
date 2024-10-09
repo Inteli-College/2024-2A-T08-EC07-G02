@@ -71,6 +71,8 @@ Para executar o projeto, siga os passos abaixo:
 
 6. Execute o comando no arquivo `main.py` localizado na pasta `back-end/app`, `python main.py`. Assim, terá acesso as rotas do back-end do projeto.
 
+*OBS*: Para facilitar o entendimento do processo de treinamento e da escolha do modelo, temos dois arquivos: `src/model/Treino_modelo.ipynb` e `src/model/BATCHES.py`
+
 ## Documentação
 
 Para acessar a nossa documentação, clique [aqui](https://inteli-college.github.io/2024-2A-T08-EC07-G02/)!
