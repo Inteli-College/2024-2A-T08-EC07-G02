@@ -59,17 +59,14 @@ README.md
 ## Guia de instrução 
 
 Para executar o projeto, siga os passos abaixo:
-1. **Instale as Dependências**: No terminal, execute o comando: `pip install -r requirements.txt`
+1. Clone esse repositório e abrar ele com o Visual Studio Code.
 
-2. Acesse o Diretório do Código: Navegue até a pasta src.
+2. Agora execute o comando para iniciar o frontend: `npm install` para instalar as dependências e `npm run dev` para inciar. 
 
-3. Abra o Arquivo Principal: No Visual Studio Code, abra o arquivo main.ipynb.
+3. Acesse o Diretório do Código: Navegue até a pasta `src/backend`.
 
-4. Execute o Código: Com o arquivo aberto, clique em `Run All` para executar todas as células do notebook.
+4. Agora no terminal integrado do Visual Studio Code: `docker-compose up --build` para inicalizar o backend e o banco de dados.
 
-5. Execute o comando na pasta front-end `npm run dev` para rodar o as telas desenvolvidas.
-
-6. Execute o comando no arquivo `main.py` localizado na pasta `back-end/app`, `python main.py`. Assim, terá acesso as rotas do back-end do projeto.
 
 ## Documentação
 
@@ -102,3 +99,36 @@ Para acessar a nossa documentação, clique [aqui](https://inteli-college.github
         <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="Attribution">
     </a>
 </div>
+
+## 🗃 Histórico de lançamento
+
+- 1.1.0 - 05/08/2024
+  - Início do Projeto
+
+- 1.1.1 - 19/08/2024
+  - Definição do escopo do projeto
+  - Experiência do Usuário
+  - Economia Circular
+  - Primeiro modelo preditivo
+
+- 1.1.2 - 02/09/2024
+  - Alterar filtros na exploração de dados.
+  - Melhoria de acurácia e recall dos modelos.
+  - Testes de novas configurações de modelos.
+  - Criação da nossa primeira API para acesso ao modelo.
+
+- 1.2.0 - 16/09/2024
+  - Otimização do modelo
+  - A solução dockerizada
+  - Implementação de Datalake
+
+- 1.2.1 - 30/09/2024
+  - Processo de ETL (Extract, Transform, Load)
+  - Refinamento do modelo
+  - Pipeline de treinamento com a integração do modelo
+  - Dashboard para visualização dos dados
+
+- 1.2.2 - 07/10/2024
+  - Docker e Datalake em nuvem
+  - Refinamento do front-end
+  - Finalização da integração
