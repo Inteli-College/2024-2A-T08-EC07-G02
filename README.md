@@ -2,7 +2,7 @@
 Repositório do grupo _**Presgen**_
 
 ## Descrição do Projeto
-O projeto intitulado "Sistema de Manutenção Preditiva com IA e Arquitetura em Nuvem" foi desenvolvido em parceria com a Volkswagen do Brasil. Ele visa criar uma solução baseada em inteligência artificial para classificar veículos e indicar possíveis falhas que podem ocorrer durante os testes de rodagem. O sistema utiliza algoritmos preditivos para identificar a classe do veículo, o que ajuda a determinar a sequência de testes de inspeção necessários. A solução é projetada para ser integrada ao ambiente de produção da Volkswagen, auxiliando inspetores e analistas de sistemas a otimizar os processos de inspeção de veículos.
+O projeto se baseia na criação de uma solução com modelo preditivo para indicar ao inspetor de veículos o tipo de inspeção que deverá ser realizada em um automóvel. A solução será desenvolvida em Python ou JavaScript, para facilitar a integração com o sistema de inspeção. O modelo preditivo será treinado com base em uma lista de parâmetros e deverá ser calibrado mensalmente com os novos dados de produção. Espera-se que o modelo tenha uma assertividade acima de 95% para que seja possível sua utilização. O desenvolvimento do projeto será realizado pelo analista de sistemas da fábrica, que irá adaptar o processo e utilizar o resultado do algoritmo de uma forma visual, para que o motorista inspetor consiga saber que tipo de inspeção ele deverá realizar naquele veículo.
 
 ## Objetivos do Projeto
 - Aumentar a assertividade e eficiência na inspeção de veículos;
@@ -21,6 +21,7 @@ O projeto intitulado "Sistema de Manutenção Preditiva com IA e Arquitetura em 
 ### Orientador
 - <a href="https://www.linkedin.com/in/murilo-zanini-de-carvalho-0980415b/">Murilo Zanini</a>
 ### Instrutores
+- <a href="https://www.linkedin.com/in/geraldo-magela-severino-vasconcelos-22b1b220/">Geraldo Magela</a>
 - <a href="https://www.linkedin.com/in/gui-cestari/">Guilherme Cestari</a>
 - <a href="https://www.linkedin.com/in/lisane-valdo/">Lisane Valdo</a> 
 - <a href="https://www.linkedin.com/in/monica-anastassiu-d-sc-2568522/">Mônica Anastassiu</a>
@@ -59,13 +60,13 @@ README.md
 ## Guia de instrução 
 
 Para executar o projeto, siga os passos abaixo:
-1. Clone esse repositório e abrar ele com o Visual Studio Code.
+1. Clone esse repositório e abra ele com o Visual Studio Code.
 
 2. Agora execute o comando para iniciar o frontend: `npm install` para instalar as dependências e `npm run dev` para inciar. 
 
-3. Acesse o Diretório do Código: Navegue até a pasta `src/backend`.
+3. Acesse o diretório do código: Navegue até a pasta `src/backend`.
 
-4. Agora no terminal integrado do Visual Studio Code: `docker-compose up --build` para inicalizar o backend e o banco de dados.
+4. Agora no terminal integrado do Visual Studio Code envie `docker-compose up --build` para inicalizar o backend e o banco de dados.
 
 
 ## Documentação
@@ -106,29 +107,29 @@ Para acessar a nossa documentação, clique [aqui](https://inteli-college.github
   - Início do Projeto
 
 - 1.1.1 - 19/08/2024
-  - Definição do escopo do projeto
-  - Experiência do Usuário
-  - Economia Circular
-  - Primeiro modelo preditivo
+  - Definição do escopo do projeto;
+  - Experiência do Usuário;
+  - Economia Circular;
+  - Primeiro modelo preditivo.
 
 - 1.1.2 - 02/09/2024
-  - Alterar filtros na exploração de dados.
-  - Melhoria de acurácia e recall dos modelos.
-  - Testes de novas configurações de modelos.
+  - Alterar filtros na exploração de dados;
+  - Melhoria de acurácia e recall dos modelos;
+  - Testes de novas configurações de modelos;
   - Criação da nossa primeira API para acesso ao modelo.
 
 - 1.2.0 - 16/09/2024
-  - Otimização do modelo
-  - A solução dockerizada
-  - Implementação de Datalake
+  - Otimização do modelo;
+  - Solução dockerizada;
+  - Implementação de Datalake.
 
 - 1.2.1 - 30/09/2024
-  - Processo de ETL (Extract, Transform, Load)
-  - Refinamento do modelo
-  - Pipeline de treinamento com a integração do modelo
-  - Dashboard para visualização dos dados
+  - Processo de ETL (Extract, Transform, Load);
+  - Refinamento do modelo;
+  - Pipeline de treinamento com a integração do modelo;
+  - Dashboard para visualização dos dados.
 
 - 1.2.2 - 07/10/2024
-  - Docker e Datalake em nuvem
-  - Refinamento do front-end
-  - Finalização da integração
+  - Docker e Datalake em nuvem;
+  - Refinamento do front-end;
+  - Finalização da integração.
