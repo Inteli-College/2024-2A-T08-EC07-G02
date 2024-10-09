@@ -8,6 +8,15 @@ A segurança é outro aspecto crucial, com suporte para criptografia de dados, t
 
 No contexto do projeto, está sendo utilizado o plano da AWS Academy para explorar os recursos do S3. Embora existam algumas limitações associadas a esse plano, ele atende adequadamente a todos os requisitos do projeto. No bucket do S3, os valores gerados pelo modelo estão sendo armazenados, permitindo que os usuários acessem os dados a qualquer momento e visualizem quais carros apresentam problemas.
 
+Nesse sentido, para esse projeto na parte da AWS o usuário necessita ir no arquivo `.env.example` que está localizado em `src/backend` e mudar as seguintes variavéis com suas credenciais da AWS:
+
+```
+SERVICE_NAME= ''
+AWS_ACCESS_KEY_ID= ''
+AWS_SECRET_ACCESS_KEY= ''
+REGION= ''
+```
+
 Por fim, o S3 adota um modelo de cobrança baseado no uso, com preços determinados pela quantidade de dados armazenados, transferência de dados e operações realizadas. Esse serviço é versátil e pode ser aplicado em diversos casos, como backup, recuperação de dados, armazenamento de arquivos para aplicativos web, distribuição de conteúdo e armazenamento de dados para análises e Big Data. [1]
 
 
