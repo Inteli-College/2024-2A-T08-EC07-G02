@@ -1,6 +1,7 @@
 from repositories import KNRRepository
 from prisma import enums
 from pipelines import ModelPipeline
+import pandas as pd
 
 
 class KNRService:

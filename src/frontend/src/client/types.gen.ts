@@ -8,6 +8,7 @@ export type Body_request_api_model_train_post = {
     failures: (Blob | File);
     results: (Blob | File);
     status: (Blob | File);
+    tags?: Array<(string)>;
 };
 
 export type HTTPValidationError = {
@@ -45,7 +46,7 @@ export type PredictApiKnrPredictKnrGetData = {
 
 export type PredictApiKnrPredictKnrGetResponse = (unknown);
 
-export type ListApiKnrGetResponse = (unknown);
+export type ListKnrsApiKnrGetResponse = (unknown);
 
 export type NewKnrApiKnrPostData = {
     requestBody: KNR;
@@ -97,6 +98,20 @@ export type DownloadModelApiModelDownloadModelIdGetData = {
 };
 
 export type DownloadModelApiModelDownloadModelIdGetResponse = (unknown);
+
+export type DeleteModelApiModelModelIdDeleteData = {
+    modelId: string;
+};
+
+export type DeleteModelApiModelModelIdDeleteResponse = (unknown);
+
+export type SelectModelApiModelSelectModelIdPostData = {
+    modelId: string;
+};
+
+export type SelectModelApiModelSelectModelIdPostResponse = (unknown);
+
+export type SelectedModelApiModelSelectedGetResponse = (unknown);
 
 export type GetCheckupTimeChartApiChartsCheckupTimeGetResponse = (unknown);
 

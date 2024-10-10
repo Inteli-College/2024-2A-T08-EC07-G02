@@ -3,7 +3,7 @@
 import type { CancelablePromise } from './core/CancelablePromise';
 import { OpenAPI } from './core/OpenAPI';
 import { request as __request } from './core/request';
-import type { HealthCheckApiHealthGetResponse, GetDataApiKeysGetResponse, CreateKeyApiKeysPostResponse, PredictApiKnrPredictKnrGetData, PredictApiKnrPredictKnrGetResponse, ListApiKnrGetResponse, NewKnrApiKnrPostData, NewKnrApiKnrPostResponse, GetKnrApiKnrKnrGetData, GetKnrApiKnrKnrGetResponse, GetLastKnrApiKnrLastProcessedGetResponse, GetListApiDatalakeGetResponse, InsertApiDatalakePostData, InsertApiDatalakePostResponse, GetTableApiDatalakeTableNameGetData, GetTableApiDatalakeTableNameGetResponse, DeleteTableApiDatalakeTableNameDeleteData, DeleteTableApiDatalakeTableNameDeleteResponse, RequestApiModelTrainPostData, RequestApiModelTrainPostResponse, ListModelsApiModelGetResponse, DownloadModelApiModelDownloadModelIdGetData, DownloadModelApiModelDownloadModelIdGetResponse, GetCheckupTimeChartApiChartsCheckupTimeGetResponse, GetFreqErrosChartApiChartsFreqErrosGetResponse } from './types.gen';
+import type { HealthCheckApiHealthGetResponse, GetDataApiKeysGetResponse, CreateKeyApiKeysPostResponse, PredictApiKnrPredictKnrGetData, PredictApiKnrPredictKnrGetResponse, ListKnrsApiKnrGetResponse, NewKnrApiKnrPostData, NewKnrApiKnrPostResponse, GetKnrApiKnrKnrGetData, GetKnrApiKnrKnrGetResponse, GetLastKnrApiKnrLastProcessedGetResponse, GetListApiDatalakeGetResponse, InsertApiDatalakePostData, InsertApiDatalakePostResponse, GetTableApiDatalakeTableNameGetData, GetTableApiDatalakeTableNameGetResponse, DeleteTableApiDatalakeTableNameDeleteData, DeleteTableApiDatalakeTableNameDeleteResponse, RequestApiModelTrainPostData, RequestApiModelTrainPostResponse, ListModelsApiModelGetResponse, DownloadModelApiModelDownloadModelIdGetData, DownloadModelApiModelDownloadModelIdGetResponse, DeleteModelApiModelModelIdDeleteData, DeleteModelApiModelModelIdDeleteResponse, SelectModelApiModelSelectModelIdPostData, SelectModelApiModelSelectModelIdPostResponse, SelectedModelApiModelSelectedGetResponse, GetCheckupTimeChartApiChartsCheckupTimeGetResponse, GetFreqErrosChartApiChartsFreqErrosGetResponse } from './types.gen';
 
 export class DefaultService {
     /**
@@ -63,11 +63,11 @@ export class DefaultService {
     }
     
     /**
-     * List
+     * List Knrs
      * @returns unknown Successful Response
      * @throws ApiError
      */
-    public static listApiKnrGet(): CancelablePromise<ListApiKnrGetResponse> {
+    public static listKnrsApiKnrGet(): CancelablePromise<ListKnrsApiKnrGetResponse> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/api/knr/'
@@ -252,6 +252,58 @@ export class DefaultService {
             errors: {
                 422: 'Validation Error'
             }
+        });
+    }
+    
+    /**
+     * Delete Model
+     * @param data The data for the request.
+     * @param data.modelId
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static deleteModelApiModelModelIdDelete(data: DeleteModelApiModelModelIdDeleteData): CancelablePromise<DeleteModelApiModelModelIdDeleteResponse> {
+        return __request(OpenAPI, {
+            method: 'DELETE',
+            url: '/api/model/{model_id}',
+            path: {
+                model_id: data.modelId
+            },
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Select Model
+     * @param data The data for the request.
+     * @param data.modelId
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static selectModelApiModelSelectModelIdPost(data: SelectModelApiModelSelectModelIdPostData): CancelablePromise<SelectModelApiModelSelectModelIdPostResponse> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/model/select/{model_id}',
+            path: {
+                model_id: data.modelId
+            },
+            errors: {
+                422: 'Validation Error'
+            }
+        });
+    }
+    
+    /**
+     * Selected Model
+     * @returns unknown Successful Response
+     * @throws ApiError
+     */
+    public static selectedModelApiModelSelectedGet(): CancelablePromise<SelectedModelApiModelSelectedGetResponse> {
+        return __request(OpenAPI, {
+            method: 'GET',
+            url: '/api/model/selected'
         });
     }
     
