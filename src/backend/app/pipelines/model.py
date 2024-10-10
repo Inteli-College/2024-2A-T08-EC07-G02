@@ -2,12 +2,10 @@ import os
 import logging
 import pandas as pd
 import numpy as np
+from pycaret.classification import *
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import recall_score, f1_score
-from keras.models import Sequential, load_model
-from keras.layers import Dense, Input
-from keras.optimizers import Adam
-from keras.utils import to_categorical
+import joblib
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -306,29 +304,13 @@ class Load:
         )
         logging.info("Split data into training and testing sets.")
 
-        y_train = to_categorical(y_train)
-        y_test = to_categorical(y_test)
-        logging.info("Converted labels to categorical.")
+        df_train= X_train.copy()
+        df_train["HAS_FALHA"] = y_train
 
-        model = Sequential(
-            [
-                Input(shape=(X_train.shape[1],)),
-                Dense(512, activation="sigmoid"),
-                Dense(256, activation="sigmoid"),
-                Dense(256, activation="sigmoid"),
-                Dense(64, activation="sigmoid"),
-                Dense(2, activation="softmax"),
-            ]
-        )
-        model.compile(
-            loss="categorical_crossentropy", metrics=["accuracy"], optimizer=Adam()
-        )
-        logging.info("Built and compiled the model.")
+        s = setup(df_train, target = 'HAS_FALHA', session_id = 123, use_gpu=True)
+        best = compare_models(errors="raise")
 
-        model.fit(X_train, y_train, epochs=100, validation_split=0.2, verbose=1)
-        logging.info("Model training completed.")
-
-        eva = model.predict(X_test)
+        eva = best.predict(X_test)
         eva_labels = np.argmax(eva, axis=1)
         y_test_labels = np.argmax(y_test, axis=1)
 
@@ -336,7 +318,7 @@ class Load:
         f1 = f1_score(y_test_labels, eva_labels, average="micro")
         logging.info(f"Model evaluation completed. Recall: {recall}, F1-score: {f1}")
 
-        model.save(self.output_path)
+        joblib.dump(best,self.output_path)
         logging.info(f"Model saved to {self.output_path}")
 
     def run(self):
@@ -353,7 +335,7 @@ class Predict:
             raise ValueError("MODEL_PATH environment variable not set.")
         if not os.path.exists(model_path):
             raise FileNotFoundError(f"Model file '{model_path}' not found.")
-        self.model = load_model(model_path)
+        self.model = joblib.load(model_path)
         logging.info(f"Loaded model from '{model_path}'.")
 
     def __predict(self):
@@ -385,4 +367,4 @@ if __name__ == "__main__":
     status = pd.read_excel("temp/STATUS_PREDICTOR_ANO.xlsx")
 
     model_pipeline = ModelPipeline(failures, results, status)
-    model_pipeline.run("temp/model.keras")
+    model_pipeline.run("temp/model.joblib")

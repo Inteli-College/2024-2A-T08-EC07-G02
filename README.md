@@ -69,6 +69,8 @@ Para executar o projeto, siga os passos abaixo:
 4. Agora no terminal integrado do Visual Studio Code envie `docker-compose up --build` para inicalizar o backend e o banco de dados.
 
 
+*OBS*: Para facilitar o entendimento do processo de treinamento e da escolha do modelo, temos dois arquivos: `src/model/Treino_modelo.ipynb` e `src/model/BATCHES.py`
+
 ## Documentação
 
 Para acessar a nossa documentação, clique [aqui](https://inteli-college.github.io/2024-2A-T08-EC07-G02/)!

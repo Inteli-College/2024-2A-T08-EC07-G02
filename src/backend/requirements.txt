@@ -68,3 +68,4 @@ keras==3.5.0
 tensorflow==2.17.0
 dask[complete]==2024.9.0
 openpyxl==3.1.5
+picke
