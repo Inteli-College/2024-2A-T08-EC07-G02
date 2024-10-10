@@ -16,7 +16,7 @@ Com base nos [requisitos](../sprint-1/software/requisitos.md) do projeto, os tes
 
 ## **Ambiente de Teste**
 - **Sistema Operacional**: Windows 10 e 11/ Ubuntu 22.04
-- **Navegador**: Google Chrome 90+, Firefox 88+, Microsoft Edge 90+, Opera 76+, etc.
+- **Navegador**: Google Chrome 90+, Firefox 88+, Microsoft Edge 90+, Opera 76+.
 
 ---
 
@@ -29,7 +29,7 @@ Com base nos [requisitos](../sprint-1/software/requisitos.md) do projeto, os tes
     1. Acessar a página de login, informando a URL da aplicação.
     2. Inserir o e-mail e a senha cadastrados.
     3. Clicar no botão "Entrar".
-    4. Clicar no botão "Esqueci minha senha".
+    4. Clicar no botão "Esqueci minha senha" caso não lembre da sua credencial.
 - **Resultado Esperado**: O usuário é redirecionado para a página inicial da aplicação após o login bem-sucedido. O sistema deve permitir a recuperação de senha através do e-mail cadastrado.
 - **Resultado Atual**: Após colocar o e-mail e senha, o usuário é redirecionado para a página inicial da aplicação. Porém, a recuperação de senha não está presente.
 
@@ -58,8 +58,11 @@ Com base nos [requisitos](../sprint-1/software/requisitos.md) do projeto, os tes
   1. Realizar 50 previsões concomitantemente.
   2. Verificar se o tempo de resposta para cada previsão é inferior a 5 segundos.
   3. Verificar se o modelo possui um recall de no mínimo 95%.
-  **Resultado Esperado**: O sistema deve suportar 50 previsões concomitantemente, com um tempo de resposta inferior a 5 segundos para cada previsão e um recall de no mínimo 95%.
-    **Resultado Atual**: O sistema é capaz de suportar a realização de 50 previsões concomitantemente, com um tempo de resposta próximo de a 4 segundos para cada previsão e um recall de 96%.
+ 
+ - **Resultado Esperado**: O sistema deve suportar 50 previsões concomitantemente, com um tempo de resposta inferior a 5 segundos para cada previsão e um recall de no mínimo 95%.
+    
+  -  **Resultado Atual**: O sistema é capaz de suportar a realização de 50 previsões concomitantemente, com um tempo de resposta próximo de a 4 segundos para cada previsão e um recall de 96%.
 
 ---
 
+Por fim, os testes realizados neste projeto da Volkswagen visam garantir a qualidade e a funcionalidade de todas as áreas críticas da aplicação, desde o login até o processamento de dados e predições. Cada caso de teste foi projetado para verificar o cumprimento dos requisitos funcionais e não funcionais, assegurando que o sistema atenda às expectativas de desempenho, precisão e usabilidade.
