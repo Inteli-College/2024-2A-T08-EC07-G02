@@ -185,7 +185,12 @@ pyrightconfig.json
 *.parquet
 *.json
 *.onnx
+*.joblib
 *.wal
 temp
+
 # Dev tests
 *.parquet
+
+# Models
+models

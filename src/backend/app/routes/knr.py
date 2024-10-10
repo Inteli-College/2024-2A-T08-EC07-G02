@@ -36,7 +36,7 @@ async def predict(knr: str):
 
 
 @knr_router.get("/")
-async def list():
+async def list_knrs():
     return {"knrs": await KNRService.get_knrs()}
 
 

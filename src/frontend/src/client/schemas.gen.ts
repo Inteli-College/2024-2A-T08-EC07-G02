@@ -29,6 +29,14 @@ export const Body_request_api_model_train_postSchema = {
             type: 'string',
             format: 'binary',
             title: 'Status'
+        },
+        tags: {
+            items: {
+                type: 'string'
+            },
+            type: 'array',
+            title: 'Tags',
+            default: []
         }
     },
     type: 'object',

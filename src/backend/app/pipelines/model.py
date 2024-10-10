@@ -304,21 +304,21 @@ class Load:
         )
         logging.info("Split data into training and testing sets.")
 
-        df_train= X_train.copy()
+        df_train = X_train.copy()
         df_train["HAS_FALHA"] = y_train
 
-        s = setup(df_train, target = 'HAS_FALHA', session_id = 123, use_gpu=True)
+        s = setup(df_train, target="HAS_FALHA", session_id=123, use_gpu=True)
         best = compare_models(errors="raise")
 
         eva = best.predict(X_test)
-        eva_labels = np.argmax(eva, axis=1)
-        y_test_labels = np.argmax(y_test, axis=1)
+        eva_labels = eva
+        y_test_labels = y_test
 
-        recall = recall_score(y_test_labels, eva_labels, average="micro")
-        f1 = f1_score(y_test_labels, eva_labels, average="micro")
+        recall = recall_score(y_test_labels, eva_labels, average="binary")
+        f1 = f1_score(y_test_labels, eva_labels, average="binary")
         logging.info(f"Model evaluation completed. Recall: {recall}, F1-score: {f1}")
 
-        joblib.dump(best,self.output_path)
+        joblib.dump(best, self.output_path)
         logging.info(f"Model saved to {self.output_path}")
 
     def run(self):
