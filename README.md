@@ -1,3 +1,9 @@
+# Inteli - Instituto de Tecnologia e Liderança 
+
+<p align="center">
+<a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2024/06/logo-inteli-3-768x420-1.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+</p>
+
 # _Presgen_
 Repositório do grupo _**Presgen**_
 
@@ -6,7 +12,7 @@ O projeto se baseia na criação de uma solução com modelo preditivo para indi
 
 ## Objetivos do Projeto
 - Aumentar a assertividade e eficiência na inspeção de veículos;
-- Facilitar o uso e integração com o ambiente de produção da Volkswagen;
+- Facilitar o uso e integração com o ambiente de produção da Volkswagen;sd
 - Reduzir custos operacionais e tempo de inspeção.
 
 ## 👨‍🎓 Integrantes: 
